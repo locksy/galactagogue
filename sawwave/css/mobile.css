@@ -33,13 +33,13 @@ a:focus {
   font-size: 5.3vw;
   margin: 2rem 0 1rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: full-width;
   color:#dadada;
   font-family: Righteous, serif;
 }
 
 .content__type_mobile {
-  font-size: 4.3vw; 
+  font-size: 7.3vw; 
   margin: 3rem auto 5rem;
   line-height: 1.25;
   font-family: 'Josefin Slab', serif;
