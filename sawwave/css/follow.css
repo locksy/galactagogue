@@ -38,7 +38,7 @@ a:focus {
 }
 
 .content__headline_mobile {
-  font-size: 4.3vw;
+  font-size: 6.3vw;
   margin: 2rem 0 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -56,7 +56,7 @@ a:focus {
 }
 
 .content__type_mobile {
-  font-size: 4.3vw; 
+  font-size: 6.3vw; 
   margin: 3rem auto 5rem;
   line-height: 1.25;
   font-family: 'Josefin Slab', serif;
