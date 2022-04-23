@@ -1,8 +1,4 @@
-@media only screen and (max-width: 320px) {
-  .content__type {
-    font-size: 8vw;
-  }
-}
+
 
 
 body {
@@ -25,23 +21,16 @@ a:focus {
 
 .frame__title,
 .frame {
-  font-size: 2.2vw;
+  font-size: 5.2vw;
   color:#f06565;
   font-family: 'Josefin Slab', serif;
   font-weight: 900;
 }
 
-.content__headline {
-  font-size: 2.3vw;
-  margin: 2rem 0 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color:#dadada;
-  font-family: Righteous, serif;
-}
+
 
 .content__headline {
-  font-size: 2.3vw;
+  font-size: 5.3vw;
   margin: 2rem 0 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -66,7 +55,7 @@ a:focus {
 }
 
 .content__type {
-  font-size: 2.3vw;
+  font-size: 5.3vw;
   margin: 3rem auto 5rem;
   line-height: 1.25;
   font-family: 'Josefin Slab', serif;
