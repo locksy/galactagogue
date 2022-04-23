@@ -25,7 +25,7 @@ a:focus {
 }
 
 .content__headline {
-  font-size: 2vw;
+  font-size: 2.3vw;
   margin: 2rem 0 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -34,7 +34,7 @@ a:focus {
 }
 
 .content__type {
-  font-size: 2.2vw;
+  font-size: 2.3vw;
   margin: 3rem auto 5rem;
   line-height: 1.25;
   font-family: 'Josefin Slab', serif;
@@ -90,7 +90,7 @@ a:focus {
   background: #bababa;
 }
 .fold-bottom {
-  height: 50vh;
+  height: 5 0vh;
   width: 100%;
   /* background: #ff000090; */
   transform-origin: top center;
