@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>3D Folded Layout | Demo 4 | Codrops</title>
     <link rel="shortcut icon" href="img/favicon.png">
-    
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="mobile.css" />
     <link rel="stylesheet" href="https://use.typekit.net/grh5akv.css">
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/follow.css" />
@@ -81,7 +81,7 @@
             
            
         </div>
-        <div class="content">
+        <div class="content" class="swatch" style="background-color: rgb({{color.0}}, {{color.1}}, {{color.2}})">
             <div class="fold-content" id="base-content">
                 <!-- CONTENT INSIDE HERE -->
                
@@ -156,6 +156,9 @@
     </main>
     <script src="./js/imagesloaded.pkgd.min.js"></script>
     <script src="./js/follow.js"></script>
+    <script src=".js/demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src=".js/color-thief.umd.js"></script>
 </body>
 
 </html>

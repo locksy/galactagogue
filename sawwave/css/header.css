@@ -80,6 +80,13 @@ $transition: 280ms all 120ms ease-out;
 
 /*| Navigation |*/
 
+
+.topnavgallery {
+
+display: flex;
+justify-content: center;
+}
+
 .active {
   background-image: linear-gradient(to right, rgba(7, 206, 206, 1), rgba(7, 206, 206, 0));
 }

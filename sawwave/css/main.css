@@ -13,7 +13,14 @@ flex-direction: column;
 
 /* Text Styles */
 
+.title {
+  color:black
+  mix-blend-mode: lighten;
+  z-index: 1;
+
+}
 h1 {
+
 font-family: novecento-sans-wide, sans-serif;
 font-weight: 700;
 font-style: normal;

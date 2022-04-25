@@ -24,10 +24,10 @@ body {
 .background {
   background-image: url("https://sawwave.art/img/photo_large/image0001-0.png");
    height: 100%;
+   background-clip: content-box;
+   background-size: cover;
+   padding-left: 7%;
   text-align: center;
-   box-sizing: border-box;
-   border: 1px;
-  
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -93,10 +93,9 @@ body {
 
 .background1 {
   background-image: url("https://locksy.github.io/images/4.jpg");
-   height: 100%;
-   text-align: center;
-   box-sizing: border-box;
-   border: 1px;
+  background-clip: content-box;
+  background-size: cover;
+  padding-right: 7%;
   
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,6 +104,16 @@ body {
   height: 100vh;
   position: relative;
 }
+.titlelogo {  
+    text-align:center;
+    background-image: url("img/layout/logo.png");
+    background-color: red;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
 .background1_overlay {
   position: absolute;
   top: 0;
