@@ -95,7 +95,7 @@
         // And the content is the one that scrolls
         let scale = 1;
         if (i === 0 || i === 2) {
-          scale = this.scale[i / 2];
+          scale = this.scale[i / 1.3];
         }
         scroller.style.transform = `translateY(${translateY}) scaleY(${scale})`;
         scroller.children[0].style.transform = `translateY(${scroll}px)`;
@@ -104,8 +104,8 @@
     updateFoldTransforms() {
       let y, x;
 
-      x = state.follower.x * window.innerWidth * 0.25;
-      y = state.follower.y * window.innerHeight * 0.25;
+      x = state.follower.x * window.innerWidth * 0.10;
+      y = state.follower.y * window.innerHeight * 0.10;
 
       foldsWrapper.style.transform = `translate(${x}px, ${y}px)`;
 
@@ -157,16 +157,16 @@
         scales.push(1 / scale);
 
         return `skewX(${skewAngleDegrees}deg) rotate3d(1,0, 0,${xAngleDegrees +
-          0}deg) scale3d(1,${scale},1)`;
+          0}deg) scale3d(1,${scale},1.5)`;
       }
 
       let centerRect = center.getBoundingClientRect();
-      const centerX = centerRect.left + centerRect.width / 3;
+      const centerX = centerRect.left + centerRect.width / 2;
       const centerYtop = centerRect.top;
       const centerYbottom = centerRect.top + centerRect.height;
       const centerZ = 0;
 
-      let toX = window.innerWidth / 3;
+      let toX = window.innerWidth / 2;
       let topY = 0;
       let bottomY = window.innerHeight;
       // The size of the bottom thing is around 50vh weird

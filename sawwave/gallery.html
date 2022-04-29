@@ -42,37 +42,39 @@
 <!-- Container for header section -->
 
 <div class="topnavgallery">
-<!-- slide in logo from top -->
-<img src="img/layout/logo.png" alt="Sawwave logo">
-</div>
-<div class="topnavgallery">
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
-<a href="#blog">Blog</a>
-<a href="gallery.html">Galleries</a>
-<a href="index.html" class="active">Home</a>
 
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
 </div>
+
 
 <!-- CONTENT GOES HERE -->
 
-<div>
-	<div id="backdrop" style="z-index: 1; position: absolute; top: 0; left: 0;"><img alt="" src='/backdrop.png' /></div>
-	<div id="curtain" style="z-index: 2; position: absolute; top: 0; left: 0; background-image:url(/curtain.png);background-position:100px 200px; height:250px; width:500px;">&nbsp;</div>
-  </div>
-<div>
-<h1 style="text-align:center;"> sawwave art and media</h1>
+<div class="flex-container">
+    <div class="row"> 
+		<div class="topnavgallery flex-item">
+			<a href="contact.html">Contact</a>
+			<a href="about.html">About</a>
+			<a href="#blog">Blog</a>
+			<a href="gallery.html">Galleries</a>
+			<a href="index.html" class="active">Home</a>
+			</a>
+			</div>
+			
+        <div class="flex-item titlelogo"><h1 style="text-align:center;"> sawwave art and media</h1></div>
+  
+	</div>
+</div>
 
-<div class="column" style="width: 11%; background-color: rgb(12, 21, 29);"></div>
-<div class="column">
+<script>
+	document.addEventListener("touchstart", function() {}, true);
+</script>
+
+
+<div class="column fsm-container">
 	<section class="background fsm-container">
 		<div class="background_overlay">
-		  <div class="background_overlay__inner">
+		  <div class="background_overlay__inner fsm">
 			<a href="#">
-			<h1 class="background_overlay__header">Will Marshall</h1>
+			<h1 class="background_overlay__header fsm">Will Marshall</h1>
 			</a>
 		  </div>
 		</div>
@@ -88,6 +90,7 @@
 		</div>
 	  </section>
 	  </div>
+
 	
 	
 
