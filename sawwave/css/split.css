@@ -20,6 +20,7 @@
   font-family: condor-compressed, sans-serif;
   font-weight: 222;
   text-transform: uppercase;
+  
 }
 
 .content__type {
@@ -42,7 +43,7 @@
 }
 
 .content__type-special {
-  font-size: 17vw;
+ 
   display: block;
   margin: 0 auto;
   text-align: center;

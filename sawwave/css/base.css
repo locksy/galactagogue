@@ -9,6 +9,46 @@
 
 }
 
+.container {
+	position: relative;
+	text-align: center;
+	
+  }
+.centered {
+	position: absolute;
+	top: 45%;
+	left: 53%;
+	transform: translate(-50%, -50%);
+	font-size: 17vw;
+	color: #e8c28e;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-family: condor-compressed, sans-serif;
+	font-weight: 222;
+	text-transform: uppercase;
+  }
+
+a
+{
+    display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: flex-start;
+	align-items: center;
+}
+            
+a:hover
+{
+ 
+}
+            
+a:active
+{
+    
+}
+
+
 body {
 	margin: 0;
 
