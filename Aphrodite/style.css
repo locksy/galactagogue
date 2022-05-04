@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	--color-text: #fff;
+	--color-bg: #0e0e0f;
+	--color-link: #826437;
+	--color-link-hover: #fff;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: moderno-fb, "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overscroll-behavior: none;
+}
+
+canvas {
+	display: block;
+	width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+}
