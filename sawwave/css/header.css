@@ -17,13 +17,13 @@ header {
 
 @keyframes topslide {
 from { 
-	left: -300px;
-	top: 1rem;
+	opacity: 0%;
 	overflow: hidden;
 }
 
 to {
-	left: 1rem;
+	opacity: 100%, ease-in: 0.5s;
+  left: 1rem;
 	top: 1rem;
 }
 
@@ -88,7 +88,7 @@ justify-content: center;
 }
 
 .active {
-  background-image: linear-gradient(to right, rgba(7, 206, 206, 1), rgba(7, 206, 206, 0));
+  background-image: linear-gradient(to top, rgb(255, 214, 175), rgba(7, 206, 206, 0));
 }
 nav {
   position: fixed;

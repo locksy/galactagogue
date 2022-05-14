@@ -60,6 +60,12 @@ flex-direction: column;
   z-index: 1;
 
 }
+
+.row {
+text-align: center;
+margin: auto;
+}
+
 h1 {
 
 font-family: novecento-sans-wide, sans-serif;
