@@ -153,6 +153,7 @@ a {
 .slider__slide-info--wrapper .slider__silde-info .slide__text--title {
   font-family: "Red Rose";
   font-weight: 700;
+  text-align: center;
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__index {
   position: absolute;
