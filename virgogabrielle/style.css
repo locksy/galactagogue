@@ -169,10 +169,10 @@ a {
   display: block;
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__text--title {
-  font-size: 7rem;
-  transform: translateX(10%);
+  font-size: 11rem;
+  transform: translateX(50%);
   overflow: hidden;
-  line-height: 280%;
+  line-height: 175%;
   color: transparent;
   -webkit-text-stroke: 2px #4828c5;
   opacity: 77%;
