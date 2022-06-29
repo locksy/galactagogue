@@ -13,8 +13,8 @@
 
 
 @font-face {
-  font-family: 'modern goth';
-  src: url(modern-goth.ttf);
+  font-family: 'Royal';
+  src: url(Royal-7B3K.ttf);
 }
 .granimate {
   background-color: #570063;
@@ -154,7 +154,7 @@ a {
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__index,
 .slider__slide-info--wrapper .slider__silde-info .slide__text--title {
-  font-family: "modern goth";
+  font-family: "Royal";
   font-weight: 700;
   font-size: 10rem;
   text-align: center;
@@ -188,7 +188,7 @@ a {
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__text--description {
   width: 350px;
-  font-family: "modern goth";
+  font-family: "Royal";
   font-size: 1rem;
   line-height: 140%;
 }
@@ -265,7 +265,7 @@ a {
   color: #c2ff50;
   background-blend-mode: difference;
   opacity: 77%;
-  font-family: "modern goth";
+  font-family: "Royal";
   text-align: center;
   font-weight: 300;
   z-index: 50;
@@ -284,7 +284,7 @@ a {
   justify-self: left;
   content: '#JUST_START';
     height: 85%;
-    font-family: "modern goth";
+    font-family: "Royal";
     font-size: 13vmin;
     color: #f9ccca;
     display: flex;
@@ -365,8 +365,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2vmin;
-  font-family: "modern goth";
+  font-size: 10rem;
+  font-family: "Royal";
   color: #c2ff50;
 }
 .loading__wrapper .loading__text--inner {
@@ -382,8 +382,8 @@ a {
 }
 .loading__wrapper .text__wrapper {
   position: relative;
-  font-size: 5rem;
-  font-family: "modern goth";
+  font-size: 8rem;
+  font-family: "Royal";
   font-display: swap;
   color: #c2ff50;
   
