@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 :root {
@@ -18,7 +19,7 @@
 }
 .granimate {
   background-color: #570063;
-  animation: hue 11s linear 0s infinite reverse;
+  animation: hue 5s linear 0s infinite reverse;
 }
 .granimate::before {
   background: linear-gradient(105deg, rgb(44, 1, 56), #04e200);
@@ -138,6 +139,8 @@ a {
   width: var(--image-width);
   height: var(--image-height);
   transform: translate(-50%, -50%);
+  background-blend-mode: difference;
+  -webkit-text-stroke:  0.5px #4828c5;
   z-index: 2;
 }
 .slider__slide-info--wrapper .slider__silde-info {
@@ -300,14 +303,11 @@ a {
   content: '#JUST_START';
     height: 85%;
     font-family: "Citation Regular";
-    font-size: 13vmin;
+    font-size: 3rem;
     color: #f9ccca;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 0 0 5px $p, 0 0 15px $p, 0 0 25px $p, 0 0 35px $p, 0 0 50px $pd,
-      0 0 75px $pd, 0 0 100px $pd, 0 0 150px $pd;
-    animation: flicker 1.5s infinite alternate;
   }
 
   &::after {
@@ -315,26 +315,7 @@ a {
     filter: blur(3px) opacity(50%);
   }
 
-@keyframes flicker {
-  0%,
-  16%,
-  18%,
-  21%,
-  23%,
-  54%,
-  56%,
-  100% {
-    text-shadow: 0 0 5px $p, 0 0 15px $p, 0 0 25px $p, 0 0 35px $p, 0 0 50px $pd,
-      0 0 75px $pd, 0 0 100px $pd, 0 0 150px $pd;
-  }
 
-  17%,
-  22%,
-  55% {
-    text-shadow: 0 0 5px $p, 0 0 5px $p, 0 0 5px $p, 0 0 15px $p, 0 0 30px $pd,
-      0 0 45px $pd, 0 0 75px $pd, 0 0 125px $pd;
-  }
-}
 
 
 .frame__button {
@@ -400,6 +381,7 @@ a {
   font-size: 3rem;
   font-family: "Citation Regular";
   font-display: swap;
+  letter-spacing: 1px;
   color: #c2ff50;
   
 }
@@ -548,3 +530,4 @@ a {
     display: none;
   }
 }
+

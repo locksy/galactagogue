@@ -32,6 +32,46 @@
 	}
 
 </style>
+<script>
+	var mouseX = 0, mouseY = 0;
+
+// Set up mouse events for computer
+document.addEventListener("mousedown", function(){
+  document.getElementById('event').innerHTML = 'mousedown';
+}, false);
+
+document.addEventListener("mouseup", function(){
+  document.getElementById('event').innerHTML = 'mouseup';
+}, false);
+document.onmousemove = function(e) {
+   mouseX = e.pageX;
+   mouseY = e.pageY;
+  
+  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
+  document.getElementById('event').innerHTML = 'mousemove';
+};
+
+
+
+// Set up touch events for mobile, etc
+document.addEventListener("touchstart", function (event) {
+  // Do something on touchstart
+  document.getElementById('event').innerHTML = 'touchstart';
+}, false);
+
+document.addEventListener("touchend", function (event) {
+  // Do something on touchend
+  document.getElementById('event').innerHTML = 'touchend';
+}, false);
+document.addEventListener("touchmove", function (event) {
+  // Do something on touchmove
+  mouseX = event.changedTouches[0].pageX;
+  mouseY = event.changedTouches[0].pageY;
+  
+  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
+  document.getElementById('event').innerHTML = 'touchmove';
+}, false);
+</script>
 </head>
 <body class="granimate">
 <!-- partial:index.partial.html -->
