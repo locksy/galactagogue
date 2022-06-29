@@ -11,8 +11,8 @@
 <body class="granimate">
 <!-- partial:index.partial.html -->
 <main>
-	<div class="frame">
-		<h3 class="frame__logo">virgogabrielle</h3>
+		<div class="frame">
+		<h3 class="frame__logo logo-1">virgogabrielle</h3>
 		<button class="frame__button">999</button>
 		<p class="frame__artist" style="text-align: center ;">
 			<span>[ Click Image<a href="#" target="_blank">To Enlarge ]</a></span>
@@ -333,6 +333,25 @@
 	document.addEventListener("touchstart", function() {}, true);
 	</script>
 <!-- partial -->
+	<script>
+
+		import { swarmBackground } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+const bg = swarmBackground({
+  el: document.getElementById('app'),
+  eventsEl: document.body,
+  gpgpuSize: 256,
+    color: [Math.random() * 0xffffff, Math.random() * 0xffffff],
+  geometry: 'default'
+})
+
+bg.three.camera.position.set(0, 0, 200)
+
+document.body.addEventListener('click', () => {
+  bg.setColors([Math.random() * 0xffffff, Math.random() * 0xffffff])
+})
+
+	</script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
 <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
