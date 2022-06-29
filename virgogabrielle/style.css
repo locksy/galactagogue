@@ -436,7 +436,7 @@ a {
 }
 
 @media (any-pointer: fine) {
-  .cursor {
+  .cursor:after {
     position: fixed;
     top: 0;
     left: 0;
