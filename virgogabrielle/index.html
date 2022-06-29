@@ -5,14 +5,39 @@
   <meta charset="UTF-8">
   <title>virgogabrielle</title>
   <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
-<link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
+<link rel="stylesheet" href="./style.css">
+<style>
+	.tester {
+		
+		
+		height: 100%;
+		overflow: hidden;
+	}
 
+	.scroll-space {
+		height: 9000px;
+	}
+
+	#native, #no-native {
+		font-size: 1.1em;
+		padding: 10px 20px;
+		display: none;
+		margin: 25px 0;
+	}
+
+	.show {
+		display: block !important;
+	}
+
+</style>
 </head>
 <body class="granimate">
 <!-- partial:index.partial.html -->
 <main>
-		<div class="frame">
-		<h3 class="frame__logo logo-1">virgogabrielle</h3>
+	<div class="container tester azure" id="auto"">
+	<div class="frame">
+		<h3 class="frame__logo">virgogabrielle</h3>
 		<button class="frame__button">999</button>
 		<p class="frame__artist" style="text-align: center ;">
 			<span>[ Click Image<a href="#" target="_blank">To Enlarge ]</a></span>
@@ -166,12 +191,12 @@
 		</nav>
 	</div>
 </main>
-
-<svg class="cursor cursor--large" id="cursor" width="60" height="60" viewBox="0 0 60 60">
-	<circle class="cursor__inner" id="cursor" cx="30" cy="30" r="20" />
+</div>
+<svg class="cursor cursor--large" width="60" height="60" viewBox="0 0 60 60">
+	<circle class="cursor__inner" cx="30" cy="30" r="20" />
 </svg>
-<svg class="cursor cursor--small" id="cursor" width="60" height="60" viewBox="0 0 60 60">
-	<circle class="cursor__inner" id="cursor" cx="30" cy="30" r="5" />
+<svg class="cursor cursor--small" width="60" height="60" viewBox="0 0 60 60">
+	<circle class="cursor__inner" cx="30" cy="30" r="5" />
 </svg>
 <svg class="cursor cursor--close" width="40" height="40" viewBox="0 0 512 512">
 	<line x1="368" y1="368" x2="144" y2="144" />
@@ -208,62 +233,26 @@
 </div>
 
 <!-- //////// SHADER CODE //////// -->
+<script src="hammer.js"></script>
 <script>
-onload = adding;
+	var support = Hammer.prefixed(document.body.style, 'touchAction');
+	document.getElementById(support ? 'native' : 'no-native').className += ' show';
 
-// Define Variable
-var body = document.body;
-var cursor = document.getElementById('cursor');
-var cs = cursor.style ;
-var height = cursor.offsetHeight;
-var width = cursor.offsetWidth;
-var text = document.getElementById('y');
+	var touchActions = ['auto', 'pan-y', 'pan-x', 'pan-x pan-y', 'none'];
+	Hammer.each(touchActions, function(touchAction) {
+		var el = document.getElementById(touchAction.replace(" ", "-"));
 
-// the pointer event polyfill
-// requires the touch-action property
-// as an attribute instead of a css
-// property:
-document.body.setAttribute('touch-action', 'none')
+		var mc = Hammer(el, {
+			touchAction: touchAction
+		});
+		mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+		mc.get('pinch').set({ enable: true });
+		mc.get('rotate').set({ enable: true });
 
-//Add Event Listener
-function adding()
-{
-cursor.addEventListener('pointerdown',pointerdown,false);
-body.addEventListener('pointerup',pointerup,false);
-}
-
-//On mousedown (hold) function
-function pointerdown()
-{
-	cursor.addEventListener('pointermove',move,true);
-	body.addEventListener('pointermove',move,true);
-}
-//On mouseup (relase) function 
-function pointerup()
-{
-	cursor.removeEventListener('pointermove',move,true);
-	body.removeEventListener('pointermove',move,true);
-	text.innerHTML = "Drag ME";
-		text.style.top = "";
-}
-
-//on mousemove funciton
-function move(event){
-	var epY = event.clientY;
-	var epX = event.clientX;
-	 if (document.querySelectorAll("input[name='revertxy']:checked").length >= 1) {
-    epY = event.clientX,
-    epX = event.clientY
-  }
-	cs.position = "absolute";
-	cs.top = epY + "px";
-	cs.left = epX + "px";
-	text.style.top = "30px";
-	cs.transform = "translateX(" + -width/2 + "px ) translateY("+ -height/2 +"px)";
-	text.innerHTML = "x : " + epX + "px "+" y : " + epY + "px";	
-}
-cs.position = "";
-
+		mc.on("pan swipe rotate pinch tap doubletap press", function(ev) {
+			el.textContent = ev.type +" "+ el.textContent;
+		});
+	});
 </script>
 <script id="vertexShader" type="x-shader/x-vertex">
 	precision mediump float;
@@ -408,6 +397,7 @@ document.body.addEventListener('click', () => {
 })
 
 	</script>
+	
   <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
 <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
