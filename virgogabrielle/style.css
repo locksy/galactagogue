@@ -1,3 +1,4 @@
+*{ touch-action: none; } 
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 :root {
@@ -436,7 +437,7 @@ a {
 }
 
 @media (any-pointer: fine) {
-  .cursor:after {
+  .cursor {
     position: fixed;
     top: 0;
     left: 0;

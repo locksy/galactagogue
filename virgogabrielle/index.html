@@ -209,79 +209,18 @@
 
 <!-- //////// SHADER CODE //////// -->
 <script>
-	console.clear();
-var doc = { x: $("body").width(), y: $("body").height() },
-  renderPosition = { x: doc.x / 2, y: doc.y / 2 },
-  run,
-  renderSpeed = 100;
-$(window).on(
-  "resize",
-  _.debounce(function () {
-    console.log("resize fired");
-    doc = { x: $("body").width(), y: $("body").height() };
-  }, 500)
-);
-$("body").on("mouseover", function (e) {
-  console.log("mousedown detected");
-  if (e.which == 1) {
-    run = setInterval(create, renderSpeed);
-  }
-});
-$(document).on("touchstart", function (e) {
-  console.log("touchstart detected");
-  renderPosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-  run = setInterval(create, renderSpeed);
-});
-$(document).on(
-  "mousemove",
-  _.throttle(function (e) {
-    console.log("mousemove detected");
-    renderPosition = { x: e.pageX, y: e.pageY };
-    if (
-      renderPosition.x <= 0 ||
-      renderPosition.x >= doc.x ||
-      renderPosition.y <= 0 ||
-      renderPosition.y >= doc.y
-    ) {
-      clearInterval(run);
-    }
-  }, renderSpeed)
-);
-$(document).on(
-  "touchmove",
-  _.throttle(function (e) {
-    console.log("touchmove detected");
-    renderPosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-    if (
-      renderPosition.x <= 0 ||
-      renderPosition.x >= doc.x ||
-      renderPosition.y <= 0 ||
-      renderPosition.y >= doc.y
-    ) {
-      clearInterval(run);
-    }
-  }, renderSpeed)
-);
-$("body").on("mouseup touchend", function (e) {
-  console.log("mouseup or touchend detected");
-  clearInterval(run);
-});
-
-function create() {
-  var div = "<div></div>",
-    matrixSave = $("div").last().css("transform");
-  div = $(div).css({
-    left: renderPosition.x + "px",
-    top: renderPosition.y + "px"
-  });
-  if ($("div").last().hasClass("cursor")) {
-    $(div).addClass("nag");
-  } else {
-    $(div).addClass("cursor");
-  }
-  $(div).appendTo("body");
-}
-
+	let div = document.querySelector("div")
+div.addEventListener("pointerdown",(e)=>{
+    console.log("down")
+    console.log("attempt release implicit capture")
+    div.releasePointerCapture(e.pointerId) // <- Important!
+})
+div.addEventListener("pointerenter",(e)=>{
+    console.log("enter")
+})
+div.addEventListener("pointerleave",(e)=>{
+    console.log("leave")
+})
 </script>
 <script id="vertexShader" type="x-shader/x-vertex">
 	precision mediump float;
