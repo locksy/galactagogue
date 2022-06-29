@@ -105,9 +105,12 @@
 
 html,
 body:hover, body:active {
-  width: 100%;
+  margin: 0;
+  padding: 0;
   height: 100%;
-  font-size: 16px;
+  min-height: 100%;
+  width: 100%;
+  font-size: 13px/1.5em;
   background: linear-gradient(105deg, rgba(255, 190, 0, 0), #ff00ae);
   animation: hue 12s linear 1s infinite;
   overflow: hidden;
@@ -301,6 +304,18 @@ a {
   display: none;
 }
 
+pre {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.clear { clear: both; }
+
 .frame {
   position: fixed;
   width: 100%;
@@ -470,7 +485,7 @@ a {
     background-blend-mode: difference;
     
   }
-  #cursor--small .cursor__inner {
+  .cursor--small .cursor__inner {
     fill: var(--cursor-stroke);
     stroke: var(--cursor-fill);
     opacity: 0.7;
