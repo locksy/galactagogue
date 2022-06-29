@@ -1,4 +1,4 @@
-*{ touch-action: none; } 
+
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 :root {
@@ -437,7 +437,7 @@ a {
 }
 
 @media (any-pointer: fine) {
-  .cursor {
+  #cursor {
     position: fixed;
     top: 0;
     left: 0;
@@ -454,7 +454,7 @@ a {
     0 0 100px 60px rgb(0, 106, 255), /* middle magenta */
     0 0 140px 90px rgb(255, 0, 81); /* outer cyan */
   }
-  .cursor--large .cursor__inner {
+  #cursor--large .cursor__inner {
     fill: var(--cursor-fill);
     stroke: var(--cursor-stroke);
     stroke-width: var(--cursor-stroke-width);
@@ -470,7 +470,7 @@ a {
     background-blend-mode: difference;
     
   }
-  .cursor--small .cursor__inner {
+  #cursor--small .cursor__inner {
     fill: var(--cursor-stroke);
     stroke: var(--cursor-fill);
     opacity: 0.7;

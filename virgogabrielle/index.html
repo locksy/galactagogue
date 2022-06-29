@@ -167,11 +167,11 @@
 	</div>
 </main>
 
-<svg class="cursor cursor--large" width="60" height="60" viewBox="0 0 60 60">
-	<circle class="cursor__inner" cx="30" cy="30" r="20" />
+<svg class="cursor cursor--large" id="cursor" width="60" height="60" viewBox="0 0 60 60">
+	<circle class="cursor__inner" id="cursor" cx="30" cy="30" r="20" />
 </svg>
-<svg class="cursor cursor--small" width="60" height="60" viewBox="0 0 60 60">
-	<circle class="cursor__inner" cx="30" cy="30" r="5" />
+<svg class="cursor cursor--small" id="cursor" width="60" height="60" viewBox="0 0 60 60">
+	<circle class="cursor__inner" id="cursor" cx="30" cy="30" r="5" />
 </svg>
 <svg class="cursor cursor--close" width="40" height="40" viewBox="0 0 512 512">
 	<line x1="368" y1="368" x2="144" y2="144" />
@@ -209,18 +209,61 @@
 
 <!-- //////// SHADER CODE //////// -->
 <script>
-	let div = document.querySelector("div")
-div.addEventListener("pointerdown",(e)=>{
-    console.log("down")
-    console.log("attempt release implicit capture")
-    div.releasePointerCapture(e.pointerId) // <- Important!
-})
-div.addEventListener("pointerenter",(e)=>{
-    console.log("enter")
-})
-div.addEventListener("pointerleave",(e)=>{
-    console.log("leave")
-})
+onload = adding;
+
+// Define Variable
+var body = document.body;
+var cursor = document.getElementById('cursor');
+var cs = cursor.style ;
+var height = cursor.offsetHeight;
+var width = cursor.offsetWidth;
+var text = document.getElementById('y');
+
+// the pointer event polyfill
+// requires the touch-action property
+// as an attribute instead of a css
+// property:
+document.body.setAttribute('touch-action', 'none')
+
+//Add Event Listener
+function adding()
+{
+cursor.addEventListener('pointerdown',pointerdown,false);
+body.addEventListener('pointerup',pointerup,false);
+}
+
+//On mousedown (hold) function
+function pointerdown()
+{
+	cursor.addEventListener('pointermove',move,true);
+	body.addEventListener('pointermove',move,true);
+}
+//On mouseup (relase) function 
+function pointerup()
+{
+	cursor.removeEventListener('pointermove',move,true);
+	body.removeEventListener('pointermove',move,true);
+	text.innerHTML = "Drag ME";
+		text.style.top = "";
+}
+
+//on mousemove funciton
+function move(event){
+	var epY = event.clientY;
+	var epX = event.clientX;
+	 if (document.querySelectorAll("input[name='revertxy']:checked").length >= 1) {
+    epY = event.clientX,
+    epX = event.clientY
+  }
+	cs.position = "absolute";
+	cs.top = epY + "px";
+	cs.left = epX + "px";
+	text.style.top = "30px";
+	cs.transform = "translateX(" + -width/2 + "px ) translateY("+ -height/2 +"px)";
+	text.innerHTML = "x : " + epX + "px "+" y : " + epY + "px";	
+}
+cs.position = "";
+
 </script>
 <script id="vertexShader" type="x-shader/x-vertex">
 	precision mediump float;
