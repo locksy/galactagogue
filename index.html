@@ -30,6 +30,21 @@
 				<div class="content__text"><span class="content__text-inner">galactagogue</span></div>
 			</div>
 		</main>
+		<script>
+			window.addEventListener('touchstart', function onFirstTouch() {
+  // we could use a class
+  document.body.classList.add('user-is-touching');
+
+  // or set some global variable
+  window.USER_IS_TOUCHING = true;
+
+  // or set your app's state however you normally would
+  myFrameworkOfChoice.dispatchEvent('USER_IS_TOUCHING', true);
+
+  // we only need to know once that a human touched the screen, so we can stop listening now
+  window.removeEventListener('touchstart', onFirstTouch, false);
+}, false);
+		</script>
 		<script src="js/blotter.min.js"></script>
         <script src="js/materials/liquidDistortMaterial.js"></script>
 		<script src="js/imagesloaded.pkgd.min.js"></script>

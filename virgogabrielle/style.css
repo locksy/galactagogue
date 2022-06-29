@@ -11,11 +11,56 @@
 }
 
 
-
 @font-face {
-  font-family: 'modern goth';
-  src: url(modern-goth.ttf);
+  font-family: bimbo;
+  src: url(bimbo.dripping-jumbo.ttf);
 }
+
+.sign {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__word {
+    font-size: 5.6rem;
+    text-align: center;
+    line-height: 1;
+    color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
+  }
+
+}
+
+/*-- Animation Keyframes --*/
+
+// animation
+
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
+  }
+}
+
+
+
+
 .granimate {
   background-color: #570063;
   animation: hue 11s linear 0s infinite reverse;
@@ -24,7 +69,6 @@
   background: linear-gradient(105deg, rgb(44, 1, 56), #04e200);
   animation: hue 12s linear 1s infinite;
 }
-
 
 @keyframes hue {
   to {
@@ -59,7 +103,7 @@
 
 
 html,
-body {
+body:hover, body:active {
   width: 100%;
   height: 100%;
   font-size: 16px;
@@ -80,7 +124,7 @@ body {
 
 body:before {
 
-  background: radial-gradient(105deg, rgba(255, 190, 0, 0), #6c0053);
+  background: linear-gradient(105deg, rgba(255, 190, 0, 0), #6c0053);
   animation: hue 12s linear 1s infinite;
 }
 
@@ -149,14 +193,13 @@ a {
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__text--wrapper {
   position: absolute;
-  bottom: -17%;
-  left: 55%;
+  bottom: -27%;
+  left: 95%;
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__index,
 .slider__slide-info--wrapper .slider__silde-info .slide__text--title {
-  font-family: "modern goth";
+  font-family: "Red Rose";
   font-weight: 700;
-  font-size: 10rem;
   text-align: center;
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__index {
@@ -165,7 +208,7 @@ a {
   top: 0;
   transform: translate(-20%, -70%);
   display: inline-block;
-  font-size: 44rem;
+  font-size: 14rem;
   overflow: hidden;
   line-height: 80%;
 }
@@ -188,7 +231,7 @@ a {
 }
 .slider__slide-info--wrapper .slider__silde-info .slide__text--description {
   width: 350px;
-  font-family: "modern goth";
+  font-family: "Lato";
   font-size: 1rem;
   line-height: 140%;
 }
@@ -265,7 +308,7 @@ a {
   color: #c2ff50;
   background-blend-mode: difference;
   opacity: 77%;
-  font-family: "modern goth";
+  font-family: "bimbo";
   text-align: center;
   font-weight: 300;
   z-index: 50;
@@ -282,46 +325,8 @@ a {
 .frame__logo {
   grid-area: logo;
   justify-self: left;
-  content: '#JUST_START';
-    height: 85%;
-    font-family: "modern goth";
-    font-size: 13vmin;
-    color: #f9ccca;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0 5px $p, 0 0 15px $p, 0 0 25px $p, 0 0 35px $p, 0 0 50px $pd,
-      0 0 75px $pd, 0 0 100px $pd, 0 0 150px $pd;
-    animation: flicker 1.5s infinite alternate;
-  }
-
-  &::after {
-    transform: rotateX(180deg) translateY(82%);
-    filter: blur(3px) opacity(50%);
-  }
-
-@keyframes flicker {
-  0%,
-  16%,
-  18%,
-  21%,
-  23%,
-  54%,
-  56%,
-  100% {
-    text-shadow: 0 0 5px $p, 0 0 15px $p, 0 0 25px $p, 0 0 35px $p, 0 0 50px $pd,
-      0 0 75px $pd, 0 0 100px $pd, 0 0 150px $pd;
-  }
-
-  17%,
-  22%,
-  55% {
-    text-shadow: 0 0 5px $p, 0 0 5px $p, 0 0 5px $p, 0 0 15px $p, 0 0 30px $pd,
-      0 0 45px $pd, 0 0 75px $pd, 0 0 125px $pd;
-  }
+  
 }
-
-
 .frame__button {
   grid-area: btn;
   justify-self: right;
@@ -366,7 +371,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2vmin;
-  font-family: "modern goth";
+  font-family: "bimbo";
   color: #c2ff50;
 }
 .loading__wrapper .loading__text--inner {
@@ -383,7 +388,7 @@ a {
 .loading__wrapper .text__wrapper {
   position: relative;
   font-size: 5rem;
-  font-family: "modern goth";
+  font-family: "bimbo";
   font-display: swap;
   color: #c2ff50;
   
@@ -464,7 +469,7 @@ a {
     background-blend-mode: difference;
     
   }
-  .cursor--small:hover, .cursor--small:active .cursor__inner:hover, .cursor__inner:active  {
+  .cursor--small .cursor__inner {
     fill: var(--cursor-stroke);
     stroke: var(--cursor-fill);
     opacity: 0.7;
