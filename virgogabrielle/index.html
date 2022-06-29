@@ -7,71 +7,7 @@
   <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
 <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
 <link rel="stylesheet" href="./style.css">
-<style>
-	.tester {
-		
-		
-		height: 100%;
 
-		overflow: hidden;
-	}
-
-	.scroll-space {
-		height: 9000px;
-	}
-
-	#native, #no-native {
-		font-size: 1.1em;
-		padding: 10px 20px;
-		display: none;
-		margin: 25px 0;
-	}
-
-	.show {
-		display: block !important;
-	}
-
-</style>
-<script>
-	var mouseX = 0, mouseY = 0;
-
-// Set up mouse events for computer
-document.addEventListener("mousedown", function(){
-  document.getElementById('event').innerHTML = 'mousedown';
-}, false);
-
-document.addEventListener("mouseup", function(){
-  document.getElementById('event').innerHTML = 'mouseup';
-}, false);
-document.onmousemove = function(e) {
-   mouseX = e.pageX;
-   mouseY = e.pageY;
-  
-  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
-  document.getElementById('event').innerHTML = 'mousemove';
-};
-
-
-
-// Set up touch events for mobile, etc
-document.addEventListener("touchstart", function (event) {
-  // Do something on touchstart
-  document.getElementById('event').innerHTML = 'touchstart';
-}, false);
-
-document.addEventListener("touchend", function (event) {
-  // Do something on touchend
-  document.getElementById('event').innerHTML = 'touchend';
-}, false);
-document.addEventListener("touchmove", function (event) {
-  // Do something on touchmove
-  mouseX = event.changedTouches[0].pageX;
-  mouseY = event.changedTouches[0].pageY;
-  
-  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
-  document.getElementById('event').innerHTML = 'touchmove';
-}, false);
-</script>
 </head>
 <body class="granimate">
 <!-- partial:index.partial.html -->
@@ -280,7 +216,71 @@ document.addEventListener("touchmove", function (event) {
 	</h1>
 	<div class="bg__transition--slide"></div>
 </div>
+<style>
+	.tester {
+		
+		
+		height: 100%;
 
+		overflow: hidden;
+	}
+
+	.scroll-space {
+		height: 9000px;
+	}
+
+	#native, #no-native {
+		font-size: 1.1em;
+		padding: 10px 20px;
+		display: none;
+		margin: 25px 0;
+	}
+
+	.show {
+		display: block !important;
+	}
+
+</style>
+<script>
+	var mouseX = 0, mouseY = 0;
+
+// Set up mouse events for computer
+document.addEventListener("mousedown", function(){
+  document.getElementById('event').innerHTML = 'mousedown';
+}, false);
+
+document.addEventListener("mouseup", function(){
+  document.getElementById('event').innerHTML = 'mouseup';
+}, false);
+document.onmousemove = function(e) {
+   mouseX = e.pageX;
+   mouseY = e.pageY;
+  
+  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
+  document.getElementById('event').innerHTML = 'mousemove';
+};
+
+
+
+// Set up touch events for mobile, etc
+document.addEventListener("touchstart", function (event) {
+  // Do something on touchstart
+  document.getElementById('event').innerHTML = 'touchstart';
+}, false);
+
+document.addEventListener("touchend", function (event) {
+  // Do something on touchend
+  document.getElementById('event').innerHTML = 'touchend';
+}, false);
+document.addEventListener("touchmove", function (event) {
+  // Do something on touchmove
+  mouseX = event.changedTouches[0].pageX;
+  mouseY = event.changedTouches[0].pageY;
+  
+  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
+  document.getElementById('event').innerHTML = 'touchmove';
+}, false);
+</script>
 <!-- //////// SHADER CODE //////// -->
 <script src="hammer.js"></script>
 <script>
