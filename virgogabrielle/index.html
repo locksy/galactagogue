@@ -198,28 +198,8 @@
 			</button>
 		</nav>
 	</div>
-	<script src="gyro-gradient.umd.js"></script>
-	<script>
-		<script>
-        gyroGradient('.card', {
-            type: 'background',
-            gradient: {
-                type: 'radial',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [0, '#3c3f43', .1],
-                    [.25, '#cdddf3', .1],
-                    [1, '#cdddf3', .85]
-                ]
-            },
-            pattern: {
-                type: 'noise',
-                opacity: .25
-            }
-        });
-	</script>
+	
+
 </main>
 </div>
 <svg class="cursor cursor--large" width="60" height="60" viewBox="0 0 60 60">
@@ -261,32 +241,8 @@
 	</h1>
 	<div class="bg__transition--slide"></div>
 </div>
-<style>
-	.tester {
-		
-		
-		height: 100%;
 
-		overflow: hidden;
-	}
-
-	.scroll-space {
-		height: 9000px;
-	}
-
-	#native, #no-native {
-		font-size: 1.1em;
-		padding: 10px 20px;
-		display: none;
-		margin: 25px 0;
-	}
-
-	.show {
-		display: block !important;
-	}
-
-</style>
-
+<script src="touchmove.js"></script>
 <script id="vertexShader" type="x-shader/x-vertex">
 	precision mediump float;
 
