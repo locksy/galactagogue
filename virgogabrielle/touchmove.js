@@ -1,6 +1,6 @@
 document.addEventListener("touchstart", e => {
     ;[...e.changedTouches].forEach(touch => {
-        const cursor =document.createElement("div")
+        const cursor =document.createElement("svg")
         cursor.classList.add("cursor")
         cursor.style.top = '${touch.pageY}px'
         cursor.style.top = '${touch.pageY}px'
