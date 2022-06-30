@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+video {
+  width: 100%;
+}
+
+/* always show video controls in Safari
+   https://stackoverflow.com/a/43145210 */
+video::-webkit-media-controls-panel {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+button {
+  display: block;
+  margin: 0.5em auto;
+  font-size: 1.5em;
+}
+
+.controls {
+  margin: 0 1em;
+}
+
+.seek-status {
+  text-align: center;
+  font-size: 1.5em;
+  color: gray;
+}
+
+.seek-status .fa {
+  transition: 0.25s transform;
+}

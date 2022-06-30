@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <video src="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4" controls preload autoplay muted playsinline></video>
+      <div class="controls">
+        <div class="seek-status">
+          <i v-bind:class="videoStateIcon" v-bind:style="seekStatusTransform"></i>
+        </div>
+        <button v-on:click="toggleSeekMode">
+          {{ seeking ? "Leave seek mode" : "Enter seek mode" }}
+        </button>
+        <p v-if="seeking" class="seek-info">
+          Seek the video by tilting your device to the left and right.
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
