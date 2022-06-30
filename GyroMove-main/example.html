@@ -5,6 +5,7 @@
     <title>GyroMove Demo</title>
   </head>
   <body>
+    <div id="cursor" height: 30px width: 30px bg-color="#000000"></div>
     <h3><a id="startGyromove" href="#">Start</a></h3>
     <h3>Rotation Rate - 回転率</h3>
     <ul>
@@ -82,6 +83,14 @@
             var aZ = document.getElementById("accelerationZ");
             aZ.innerHTML = 'accelerationZ = ' + accelerationZ;
           }, 1);
+          
+          function gyromouse() {
+            var x = gyroX;
+            var y = gyroY;
+            var el = document.getElementById('cursor');
+            el.style.position = "absolute";
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
 
           //check the console too
           setInterval(function(){
