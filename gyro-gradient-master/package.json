@@ -1,0 +1,27 @@
+{
+  "name": "gyro-gradient",
+  "version": "0.0.1",
+  "description": "Add a gyroscope gradient animation to the Dom node",
+  "main": "dist/gyro-gradient.js",
+  "umd:main": "dist/gyro-gradient.umd.js",
+  "module": "dist/gyro-gradient.mjs",
+  "source": "src/index.js",
+  "scripts": {
+    "start": "microbundle watch --target web --name gyroGradient",
+    "build": "microbundle --target web --strict --name gyroGradient"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhenzhencai/gyro-gradient.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhenzhencai/gyro-gradient/issues"
+  },
+  "homepage": "https://github.com/zhenzhencai/gyro-gradient",
+  "author": "Zhenzhen Cai <caizhenzhen94@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.11.0",
+    "sass": "^1.22.12"
+  }
+}
