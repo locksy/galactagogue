@@ -7,7 +7,11 @@
   <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
 <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
 <link rel="stylesheet" href="./style.css">
-
+<script>
+	document.addEventListener('touchmove', e => {
+	this.setHoverCoordinates(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
+})
+</script>
 </head>
 <body class="granimate">
 <!-- partial:index.partial.html -->
@@ -21,9 +25,12 @@
 		</p>
 	
 	</div>
-
+	<div class="image-container">
+        <canvas class="canvas" width="900" height="1200" id="canvas"></canvas>
+        <div class="loading-screen" id="loading">Loading...</div>
+    </div>
 	<div class="slider tester azure" id="auto" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-perspective="500" gyroscope="true" >
-		<div class="slider__image--wrapper" data-tilt data-tilt-max="7" data-tilt-speed="400" data-tilt-perspective="700" gyroscope="true">
+		<div class="slider__image--wrapper" data-tilt data-tilt-max="7" data-tilt-speed="400" data-tilt-perspective="7	00" gyroscope="true">
 			<img class="slider__image slider__image--1" src="1.png" alt="image 01" />
 			<img class="slider__image slider__image--2" src="2.png" alt="image 02" />
 			<img class="slider__image slider__image--3" src="3.png" alt="image 03" />
@@ -241,68 +248,7 @@
 	}
 
 </style>
-<script>
-	var mouseX = 0, mouseY = 0;
 
-// Set up mouse events for computer
-document.addEventListener("mousedown", function(){
-  document.getElementById('event').innerHTML = 'mousedown';
-}, false);
-
-document.addEventListener("mouseup", function(){
-  document.getElementById('event').innerHTML = 'mouseup';
-}, false);
-document.onmousemove = function(e) {
-   mouseX = e.pageX;
-   mouseY = e.pageY;
-  
-  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
-  document.getElementById('event').innerHTML = 'mousemove';
-};
-
-
-
-// Set up touch events for mobile, etc
-document.addEventListener("touchstart", function (event) {
-  // Do something on touchstart
-  document.getElementById('event').innerHTML = 'touchstart';
-}, false);
-
-document.addEventListener("touchend", function (event) {
-  // Do something on touchend
-  document.getElementById('event').innerHTML = 'touchend';
-}, false);
-document.addEventListener("touchmove", function (event) {
-  // Do something on touchmove
-  mouseX = event.changedTouches[0].pageX;
-  mouseY = event.changedTouches[0].pageY;
-  
-  document.getElementById('demo').innerHTML = mouseX + ', ' + mouseY;
-  document.getElementById('event').innerHTML = 'touchmove';
-}, false);
-</script>
-<!-- //////// SHADER CODE //////// -->
-<script src="hammer.js"></script>
-<script>
-	var support = Hammer.prefixed(document.body.style, 'touchAction');
-	document.getElementById(support ? 'native' : 'no-native').className += ' show';
-
-	var touchActions = ['auto', 'pan-y', 'pan-x', 'pan-x pan-y', 'none'];
-	Hammer.each(touchActions, function(touchAction) {
-		var el = document.getElementById(touchAction.replace(" ", "-"));
-
-		var mc = Hammer(el, {
-			touchAction: touchAction
-		});
-		mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-		mc.get('pinch').set({ enable: true });
-		mc.get('rotate').set({ enable: true });
-
-		mc.on("pan swipe rotate pinch tap doubletap press", function(ev) {
-			el.textContent = ev.type +" "+ el.textContent;
-		});
-	});
-</script>
 <script id="vertexShader" type="x-shader/x-vertex">
 	precision mediump float;
 
