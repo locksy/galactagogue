@@ -7,10 +7,26 @@
   <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
 <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
 <link rel="stylesheet" href="./style.css">
+
 <script>
-	document.addEventListener('touchmove', e => {
-	this.setHoverCoordinates(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
-})
+        gyroGradient('.slider', {
+            type: 'background',
+            gradient: {
+                type: 'radial',
+                flip: {
+                    x: true
+                },
+                colors: [
+                    [0, '#3c3f43', .1],
+                    [.25, '#cdddf3', .1],
+                    [1, '#cdddf3', .85]
+                ]
+            },
+            pattern: {
+                type: 'noise',
+                opacity: .25
+            }
+        });
 </script>
 </head>
 <body class="granimate">
@@ -182,6 +198,28 @@
 			</button>
 		</nav>
 	</div>
+	<script src="gyro-gradient.umd.js"></script>
+	<script>
+		<script>
+        gyroGradient('.card', {
+            type: 'background',
+            gradient: {
+                type: 'radial',
+                flip: {
+                    x: true
+                },
+                colors: [
+                    [0, '#3c3f43', .1],
+                    [.25, '#cdddf3', .1],
+                    [1, '#cdddf3', .85]
+                ]
+            },
+            pattern: {
+                type: 'noise',
+                opacity: .25
+            }
+        });
+	</script>
 </main>
 </div>
 <svg class="cursor cursor--large" width="60" height="60" viewBox="0 0 60 60">
