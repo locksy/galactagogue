@@ -257,7 +257,7 @@
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	background-image: linear-gradient(180deg,#7D5C39,#5A6879);
+	background-image: linear-gradient(180deg,#43e307,#d328cd);
 }
     </style>
 
@@ -282,7 +282,7 @@
         gyroGradient('.card', {
             type: 'background',
             gradient: {
-                type: 'linear',
+                type: 'radial',
                 flip: {
                     x: true
                 },
@@ -363,7 +363,7 @@
 		mouseX = event.pageX,
 		mouseY = event.pageY,
 		angle = Math.round( Math.atan2(mouseY - elementHeight, mouseX - elementWidth) * (180/Math.PI) ),
-		backGround = 'linear-gradient(' + angle + 'deg,#7D5C39,#5A6879)';
+		backGround = 'linear-gradient(' + angle + 'deg,#d05574,#43e307)';
 	
 	$( this ).css( 'background-image', backGround     );
 });
