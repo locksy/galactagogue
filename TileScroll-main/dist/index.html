@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="https://use.typekit.net/rmd7deq.css">
 		<link rel="stylesheet" type="text/css" href="base.css">
 	
+	
+	
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 		<script>document.documentElement.className = "js";
 
@@ -27,7 +29,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
     <meta name="format-detection" content="telephone=no">
 
     <style>
-       <style>
+     
                
 
         .card {
@@ -216,17 +218,13 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 }
    
 .container {
-  width: 400px;
-  height:400px;
-  border: 1px solid black;
-  margin:0 auto;
-  background: #43e;
+
   background-blend-mode: lighten;
   opacity: 55%;
 }
     </style>
 </head>
-	<body data-id="0" class="demo-1 loading">
+	<body data-id="0" class="demo-1 loading container">
 		<main data-scroll-container="">
 			<section id="header" class="content granimate content--numbered">
 				<div class="frame">
@@ -425,7 +423,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
         },
     })
 
-    gyroGradient('.chip', {
+    gyroGradient('.card', {
         type: 'background',
         gradient: {
             type: 'radial',
@@ -464,15 +462,6 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
     });
 
 </script>
-<script>
-	const cont = document.querySelector('.container')
-	const col1 = '#f35'
-	const col2 = '#43e'
-	cont.addEventListener('mousemove', (e) =>{
-	  let x = e.pageX - cont.getBoundingClientRect().left
-	  let y = e.pageY - cont.getBoundingClientRect().top
-	  cont.style.backgroundImage = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + col1 + ' , ' + col2 + ')';
-	})
-	
-		</script>
+
+    
 </html>
