@@ -258,25 +258,39 @@
 	height: 100vh;
 	width: 100%;
 	background-image: linear-gradient(180deg,#43e307,#d328cd);
+    
 }
-    </style>
+   
+.container {
+  width: 400px;
+  height:400px;
+  border: 1px solid black;
+  margin:0 auto;
+  background: #43e;
+  background-blend-mode: lighten;
+  opacity: 55%;
+}
+</style>
 
 </head>
 
-<body>
-<div class="card gradient"> 
+<body class="card gradient">
+<div class="card gradient container"> 
     <main>
 
        
 
     </main>
 </div>
-    <script>
-      
-    window.onload = function () {
-        document.getElementById('card').focus();
-    };
-
+<script>
+const cont = document.querySelector('.container')
+const col1 = '#f35'
+const col2 = '#43e'
+cont.addEventListener('mousemove', (e) =>{
+  let x = e.pageX - cont.getBoundingClientRect().left
+  let y = e.pageY - cont.getBoundingClientRect().top
+  cont.style.backgroundImage = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + col1 + ' , ' + col2 + ')';
+})
     </script>
     <script src="dist/gyro-gradient.umd.js"></script>
     <script>
@@ -357,18 +371,7 @@
         });
 
     </script>
-<script>
-    $( '.card' ).mousemove(function( event ) {
-	var elementWidth =  $( this ).width() / 2,
-		elementHeight =  $( this ).height() / 2,
-		mouseX = event.pageX,
-		mouseY = event.pageY,
-		angle = Math.round( Math.atan2(mouseY - elementHeight, mouseX - elementWidth) * (180/Math.PI) ),
-		backGround = 'linear-gradient(' + angle + 'deg,#d05574,#43e307)';
-	
-	$( this ).css( 'background-image', backGround     );
-});
-</script>
+
 </body>
 
 </html>
