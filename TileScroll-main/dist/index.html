@@ -27,7 +27,12 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
     <meta name="format-detection" content="telephone=no">
 
     <style>
-       
+        html {
+            color: #eee;
+            background-color: #202224;
+            font-family: -apple-system, B linkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        }
+
 
 
         h1~p {
@@ -234,24 +239,18 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
         }
     </style>
 </head>
-	<body data-id="0" class="demo-1 loading card">
+	<body data-id="0" class="demo-1 loading">
 		<main data-scroll-container="">
 			<section id="header" class="content granimate content--numbered">
 				<div class="frame">
 					<div class="frame__title-wrap">
-						<h1 class="frame__title">Image Tiles Scroll Animation with <a href="https://locomotivemtl.github.io/locomotive-scroll/">Locomotive Scroll</a></h1>
+						<h1 class="frame__title">virgogabrielle 999</h1>
 					</div>
 					<div class="frame__links">
-						<a href="https://tympanus.net/Development/videoTransitions/">Previous demo</a>
-						<a href="https://tympanus.net/codrops/?p=51396">Article</a>
-						<a href="https://github.com/codrops/TileScroll/">GitHub</a>
-					</div>
-					<div class="frame__demos">
-						<a href="/index.html" class="frame__demo frame__demo--current">Demo 1</a>
-						<a href="/index2.html" class="frame__demo">Demo 2</a>
-						<a href="/index3.html" class="frame__demo">Demo 3</a>
+				
 					</div>
 				</div>
+				
 				<p class="content__pretitle">virgogabrielle</p>
 				<h1 class="content__title" data-scroll="" data-scroll-speed="2">999</h1>
 			</section>
@@ -371,6 +370,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 						<a href="/index3.html" class="frame__demo">Demo 3</a>
 					</div>
 				</div>
+				
 			</section>
 		</main>
 		<script>
@@ -399,84 +399,84 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		<script src="/js.00a46daa.js"></script>
 	</body>
 	<script src="dist/gyro-gradient.umd.js"></script>
-    <script>
-        gyroGradient('.card', {
-            type: 'background',
-            gradient: {
-                type: 'radial',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [0, '#3c3f43', .1],
-                    [.25, '#cdddf3', .1],
-                    [1, '#cdddf3', .85]
-                ]
+<script>
+    gyroGradient('.card', {
+        type: 'background',
+        gradient: {
+            type: 'radial',
+            flip: {
+                x: true
             },
-            pattern: {
-                type: 'noise',
-                opacity: .25
-            }
-        });
+            colors: [
+                [0, '#3c3f43', .1],
+                [.25, '#cdddf3', .1],
+                [1, '#cdddf3', .85]
+            ]
+        },
+        pattern: {
+            type: 'noise',
+            opacity: .25
+        }
+    });
 
-        gyroGradient('.name, .nr, .valid > span:last-of-type', {
-            type: 'text',
-            gradient: {
-                type: 'linear',
-                angle: '110deg',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [.25, '#fff6db', 0],
-                    [.3, '#fff', .9],
-                    [.325, '#767d88', .25],
-                    [.45, '#fff', .75],
-                    [.525, '#767d88', .5],
-                    [.75, '#cdddf3', 0]
-                ]
+    gyroGradient('.gradient', {
+        type: 'background',
+        gradient: {
+            type: 'linear',
+            angle: '110deg',
+            flip: {
+                x: true
             },
-        })
+            colors: [
+                [.25, '#fff6db', 0],
+                [.3, '#fff', .9],
+                [.325, '#767d88', .25],
+                [.45, '#fff', .75],
+                [.525, '#767d88', .5],
+                [.75, '#cdddf3', 0]
+            ]
+        },
+    })
 
-        gyroGradient('.chip', {
-            type: 'background',
-            gradient: {
-                type: 'radial',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [0, '#ffaf10', .5],
-                    [.325, '#fff', .1],
-                    [.325, '#fff', .5],
-                    [1, '#fff', 1]
-                ]
+    gyroGradient('.chip', {
+        type: 'background',
+        gradient: {
+            type: 'radial',
+            flip: {
+                x: true
             },
-            pattern: {
-                type: 'noise',
-                opacity: .5
-            }
-        });
+            colors: [
+                [0, '#ffaf10', .5],
+                [.325, '#fff', .1],
+                [.325, '#fff', .5],
+                [1, '#fff', 1]
+            ]
+        },
+        pattern: {
+            type: 'noise',
+            opacity: .5
+        }
+    });
 
 
-        gyroGradient('.header', {
-            type: 'text',
-            gradient: {
-                type: 'linear',
-                angle: '120deg',
-                colors: [
-                    [.1, '#eee'],
-                    [.25, '#888'],
-                    [.35, '#999'],
-                    [.35, '#fff'],
-                    [.35, '#fff'],
-                    [.75, '#999'],
-                    [.75, '#fff']
-                ]
-            },
-        });
+    gyroGradient('.header', {
+        type: 'text',
+        gradient: {
+            type: 'linear',
+            angle: '120deg',
+            colors: [
+                [.1, '#eee'],
+                [.25, '#888'],
+                [.35, '#999'],
+                [.35, '#fff'],
+                [.35, '#fff'],
+                [.75, '#999'],
+                [.75, '#fff']
+            ]
+        },
+    });
 
-    </script>
+</script>
 <script>
 	const cont = document.querySelector('.container')
 	const col1 = '#f35'
