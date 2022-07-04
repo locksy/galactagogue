@@ -82,11 +82,11 @@
             box-sizing: border-box;
             margin-top: 2rem;
             padding: 0.75rem 1.5rem;
-            width: 18rem;
-            height: 11rem;
+            width: 100%;
+            height: 100%;
             color: #c7c9ce;
             background-color: #3c3f43;
-            border-radius: 1.25rem;
+            
             box-shadow: 0 0.5em 3em rgba(0, 0, 0, 0.25), inset -1px -1px 0 0 rgba(0, 0, 0, 0.15);
         }
 
@@ -250,46 +250,24 @@
         .test {
             font-size: 5em;
         }
+
+     
+
+.gradient {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(180deg,#7D5C39,#5A6879);
+}
     </style>
 
 </head>
 
-<body>
+<body class="card">
 
     <main>
 
-        <h1>
-            gyro-gradient
-            <span class="header" aria-hidden="true">gyro-gradient</span>
-        </h1>
-
-        <p>Add a gyroscope gradient animation to the Dom node</p>
-
-        <p><a href="https://github.com/zhenzhencai/gyro-gradient">Learn more on GitHub</a></p>
-
-        <div class="card">
-
-            <div class="card-inner">
-
-                <p class="bank"><span>Multiverse</span>Royal Bank</p>
-
-                <div class="chip"></div>
-
-                <p class="nr">5412 7501 2345 0987</p>
-
-                <p class="valid">
-                    <span>valid thru</span>
-                    <span>12/30</span>
-                </p>
-
-                <p class="name">Rick Sanchez</p>
-
-                <div class="logo">
-                    <span>mastercard</span>
-                </div>
-            </div>
-
-        </div>
+       
 
     </main>
 
@@ -372,7 +350,18 @@
         });
 
     </script>
-
+<script>
+    $( '.gradient' ).mousemove(function( event ) {
+	var elementWidth =  $( this ).width() / 2,
+		elementHeight =  $( this ).height() / 2,
+		mouseX = event.pageX,
+		mouseY = event.pageY,
+		angle = Math.round( Math.atan2(mouseY - elementHeight, mouseX - elementWidth) * (180/Math.PI) ),
+		backGround = 'linear-gradient(' + angle + 'deg,#7D5C39,#5A6879)';
+	
+	$( this ).css( 'background-image', backGround     );
+});
+</script>
 </body>
 
 </html>
