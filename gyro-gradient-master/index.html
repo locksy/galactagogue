@@ -257,7 +257,7 @@
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	background-image: linear-gradient(180deg,#43e307,#d328cd);
+	background-image: radial-gradient(180deg,#43e307,#0456fa);
     
 }
    
@@ -274,8 +274,8 @@
 
 </head>
 
-<body class="card">
-<div class="card container"> 
+<body class="card gradient container">
+<div class="card gradient container"> 
     <main>
 
        
@@ -306,8 +306,8 @@
         }
     });
 
-    gyroGradient('.name, .nr, .valid > span:last-of-type', {
-        type: 'text',
+    gyroGradient('.gradient', {
+        type: 'background',
         gradient: {
             type: 'linear',
             angle: '110deg',
