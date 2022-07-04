@@ -274,104 +274,104 @@
 
 </head>
 
-<body class="card gradient">
-<div class="card gradient container"> 
+<body class="card">
+<div class="card container"> 
     <main>
 
        
 
     </main>
 </div>
-<script>
-const cont = document.querySelector('.container')
-const col1 = '#f35'
-const col2 = '#43e'
-cont.addEventListener('mousemove', (e) =>{
-  let x = e.pageX - cont.getBoundingClientRect().left
-  let y = e.pageY - cont.getBoundingClientRect().top
-  cont.style.backgroundImage = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + col1 + ' , ' + col2 + ')';
-})
-    </script>
-    <script src="dist/gyro-gradient.umd.js"></script>
-    <script>
-        gyroGradient('.card', {
-            type: 'background',
-            gradient: {
-                type: 'radial',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [0, '#43e307', .1],
-                    [.25, '#4d1fb6', .1],
-                    [1, '#d05574', .85]
-                ]
-            },
-            pattern: {
-                type: 'noise',
-                opacity: .25
-            }
-        });
 
-        gyroGradient('.name, .nr, .valid > span:last-of-type', {
-            type: 'text',
-            gradient: {
-                type: 'linear',
-                angle: '110deg',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [.25, '#fff6db', 0],
-                    [.3, '#fff', .9],
-                    [.325, '#767d88', .25],
-                    [.45, '#fff', .75],
-                    [.525, '#767d88', .5],
-                    [.75, '#cdddf3', 0]
-                ]
-            },
-        })
-
-        gyroGradient('.chip', {
-            type: 'background',
-            gradient: {
-                type: 'radial',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [0, '#ffaf10', .5],
-                    [.325, '#fff', .1],
-                    [.325, '#fff', .5],
-                    [1, '#fff', 1]
-                ]
-            },
-            pattern: {
-                type: 'noise',
-                opacity: .5
-            }
-        });
-
-
-        gyroGradient('.header', {
-            type: 'text',
-            gradient: {
-                type: 'linear',
-                angle: '120deg',
-                colors: [
-                    [.1, '#eee'],
-                    [.25, '#888'],
-                    [.35, '#999'],
-                    [.35, '#fff'],
-                    [.35, '#fff'],
-                    [.75, '#999'],
-                    [.75, '#fff']
-                ]
-            },
-        });
-
-    </script>
-
+    
 </body>
+<script src="dist/gyro-gradient.umd.js"></script>
+<script>
+    gyroGradient('.card', {
+        type: 'background',
+        gradient: {
+            type: 'radial',
+            flip: {
+                x: true
+            },
+            colors: [
+                [0, '#3c3f43', .1],
+                [.25, '#cdddf3', .1],
+                [1, '#cdddf3', .85]
+            ]
+        },
+        pattern: {
+            type: 'noise',
+            opacity: .25
+        }
+    });
 
+    gyroGradient('.name, .nr, .valid > span:last-of-type', {
+        type: 'text',
+        gradient: {
+            type: 'linear',
+            angle: '110deg',
+            flip: {
+                x: true
+            },
+            colors: [
+                [.25, '#fff6db', 0],
+                [.3, '#fff', .9],
+                [.325, '#767d88', .25],
+                [.45, '#fff', .75],
+                [.525, '#767d88', .5],
+                [.75, '#cdddf3', 0]
+            ]
+        },
+    })
+
+    gyroGradient('.chip', {
+        type: 'background',
+        gradient: {
+            type: 'radial',
+            flip: {
+                x: true
+            },
+            colors: [
+                [0, '#ffaf10', .5],
+                [.325, '#fff', .1],
+                [.325, '#fff', .5],
+                [1, '#fff', 1]
+            ]
+        },
+        pattern: {
+            type: 'noise',
+            opacity: .5
+        }
+    });
+
+
+    gyroGradient('.header', {
+        type: 'text',
+        gradient: {
+            type: 'linear',
+            angle: '120deg',
+            colors: [
+                [.1, '#eee'],
+                [.25, '#888'],
+                [.35, '#999'],
+                [.35, '#fff'],
+                [.35, '#fff'],
+                [.75, '#999'],
+                [.75, '#fff']
+            ]
+        },
+    });
+
+</script>
+<script>
+    const cont = document.querySelector('.container')
+    const col1 = '#f35'
+    const col2 = '#43e'
+    cont.addEventListener('mousemove', (e) =>{
+      let x = e.pageX - cont.getBoundingClientRect().left
+      let y = e.pageY - cont.getBoundingClientRect().top
+      cont.style.backgroundImage = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + col1 + ' , ' + col2 + ')';
+    })
+        </script>
 </html>
