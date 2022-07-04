@@ -373,5 +373,17 @@
       let y = e.pageY - cont.getBoundingClientRect().top
       cont.style.backgroundImage = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + col1 + ' , ' + col2 + ')';
     })
+    
         </script>
+        <script>
+            const cont = document.querySelector('.container')
+            const col1 = '#f35'
+            const col2 = '#43e'
+            cont.addEventListener('touchmove', (e) =>{
+              let x = e.pageX - cont.getBoundingClientRect().left
+              let y = e.pageY - cont.getBoundingClientRect().top
+              cont.style.backgroundImage = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + col1 + ' , ' + col2 + ')';
+            })
+            
+                </script>
 </html>
