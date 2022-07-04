@@ -270,20 +270,26 @@
        
 
     </main>
+    <script>
+      
+    window.onload = function () {
+        document.getElementById('card').focus();
+    };
 
+    </script>
     <script src="dist/gyro-gradient.umd.js"></script>
     <script>
         gyroGradient('.card', {
             type: 'background',
             gradient: {
-                type: 'radial',
+                type: 'linear',
                 flip: {
                     x: true
                 },
                 colors: [
-                    [0, '#3c3f43', .1],
-                    [.25, '#cdddf3', .1],
-                    [1, '#cdddf3', .85]
+                    [0, '#43e307', .1],
+                    [.25, '#4d1fb6', .1],
+                    [1, '#d05574', .85]
                 ]
             },
             pattern: {
