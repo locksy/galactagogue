@@ -12,6 +12,7 @@
             color: #eee;
             background-color: #202224;
             font-family: -apple-system, B linkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            
         }
 
         html,
@@ -258,14 +259,14 @@
 	height: 100%;
 	width: 100%;
 	background-image: radial-gradient(180deg,#43e307,#0456fa);
-    
+    background-blend-mode: lighten
 }
    
 .container {
 
   border: 1px solid black;
   margin:0 auto;
-  background: #43e;
+  background-image: radial-gradient(180deg,#43e307,#0456fa);
   background-blend-mode: lighten;
   opacity: 55%;
 }
@@ -357,7 +358,7 @@
             colors: [
                 [0, '#3c3f43', .1],
                 [.25, '#cdddf3', .1],
-                [1, '#cdddf3', .85]
+                [1, '#43e307', .85]
             ]
         },
         pattern: {
@@ -394,8 +395,8 @@
             },
             colors: [
                 [0, '#ffaf10', .5],
-                [.325, '#fff', .1],
-                [.325, '#fff', .5],
+                [.325, '#c23b42', .1],
+                [.325, '#ee23b0', .5],
                 [1, '#fff', 1]
             ]
         },
@@ -426,8 +427,8 @@
 </script>
 <script>
     const cont = document.querySelector('.card')
-    const col1 = '#f35'
-    const col2 = '#43e'
+    const col1 = '#ee23b0'
+    const col2 = '#43e307'
     cont.addEventListener('mousemove', (e) =>{
       let x = e.pageX - cont.getBoundingClientRect().left
       let y = e.pageY - cont.getBoundingClientRect().top
