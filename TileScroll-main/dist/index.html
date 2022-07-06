@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <meta name="author" content="Codrops">
     <link rel="shortcut icon" href="/favicon.26242483.ico">
     <link rel="stylesheet" href="https://use.typekit.net/rmd7deq.css">
-    <link rel="stylesheet" type="text/css" href="/base.98fd6c19.css">
+    <link rel="stylesheet" type="text/css" href="./base.98fd6c19.css">
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
         document.documentElement.className = "js";
@@ -27,7 +27,7 @@
     <script src="/index2.js"></script>
 </head>
 
-<body class="demo-1 loading">
+<body class="demo-1 loading card">
     <main data-scroll-container="">
         <section id="header" class="content content--numbered">
             <div class="frame">
@@ -169,7 +169,85 @@
             </div>
         </section>
     </main>
-    <script src="/js.00a46daa.js"></script>
+    <script src="./js.00a46daa.js"></script>
+    <script src="./gyro-gradient.umd.js"></script>
+    <script>
+        gyroGradient('.card', {
+            type: 'background',
+            gradient: {
+                type: 'radial',
+                flip: {
+                    x: true
+                },
+                colors: [
+                    [0, '#3c3f43', .1],
+                    [.25, '#cdddf3', .1],
+                    [1, '#cdddf3', .85]
+                ]
+            },
+            pattern: {
+                type: 'noise',
+                opacity: .25
+            }
+        });
+
+        gyroGradient('.content__title', {
+            type: 'text',
+            gradient: {
+                type: 'linear',
+                angle: '110deg',
+                flip: {
+                    x: true
+                },
+                colors: [
+                    [.25, '#fff6db', 0],
+                    [.3, '#fff', .9],
+                    [.325, '#767d88', .25],
+                    [.45, '#fff', .75],
+                    [.525, '#767d88', .5],
+                    [.75, '#cdddf3', 0]
+                ]
+            },
+        })
+
+        gyroGradient('.chip', {
+            type: 'background',
+            gradient: {
+                type: 'radial',
+                flip: {
+                    x: true
+                },
+                colors: [
+                    [0, '#ffaf10', .5],
+                    [.325, '#fff', .1],
+                    [.325, '#fff', .5],
+                    [1, '#fff', 1]
+                ]
+            },
+            pattern: {
+                type: 'noise',
+                opacity: .5
+            }
+        });
+
+
+        gyroGradient('.header', {
+            type: 'text',
+            gradient: {
+                type: 'linear',
+                angle: '120deg',
+                colors: [
+                    [.1, '#eee'],
+                    [.25, '#888'],
+                    [.35, '#999'],
+                    [.35, '#fff'],
+                    [.35, '#fff'],
+                    [.75, '#999'],
+                    [.75, '#fff']
+                ]
+            },
+        });
+    </script>
 </body>
 
 </html>
