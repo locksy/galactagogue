@@ -26,7 +26,6 @@ body {
 .granimate {
     background-color: #2ecc71;
     animation: hue 11s linear 0s infinite reverse;
-    opacity: 22%;
     background-blend-mode: difference;
 }
 
