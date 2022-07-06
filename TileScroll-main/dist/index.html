@@ -3,16 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Image Tiles Scroll Animation | Demo 1 | Codrops</title>
+		<title>virgogabrielle</title>
 		<meta name="description" content="Scroll animations for image grids powered by Locomotive Scroll">
 		<meta name="keywords" content="locomotive scroll, scroll animation, website, javascript, demo">
 		<meta name="author" content="Codrops">
 		<link rel="shortcut icon" href="/favicon.26242483.ico">
 		<link rel="stylesheet" href="https://use.typekit.net/rmd7deq.css">
-		<link rel="stylesheet" type="text/css" href="base.css">
-	
-	
-	
+		<link rel="stylesheet" type="text/css" href="/base.98fd6c19.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 		<script>document.documentElement.className = "js";
 
@@ -23,221 +20,27 @@ var supportsCssVars = function supportsCssVars() {
 };
 
 supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	<script src="./base.98fd6c19.js"></script>
-	<script src="./index2.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-
-    <style>
-     
-               
-
-        .card {
-            text-align: left;
-            position: relative;
-            box-sizing: border-box;
-            margin-top: 2rem;
-            padding: 0.75rem 1.5rem;
-            width: 100%;
-            height: 100%;
-            color: #c7c9ce;
-            background-blend-mode: difference;
-            
-            box-shadow: 0 0.5em 3em rgba(0, 0, 0, 0.25), inset -1px -1px 0 0 rgba(0, 0, 0, 0.15);
-        }
-
-        .card>.shiny--wrapper {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .logo {
-            position: absolute;
-            right: -0.65rem;
-            bottom: 0.25rem;
-            padding-bottom: 0.875rem;
-            width: 3.5rem;
-            text-align: center;
-        }
-
-        .logo span {
-            position: absolute;
-            text-align: center;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            font-size: 0.6725rem;
-            font-weight: 200;
-        }
-
-        .logo::before,
-        .logo::after {
-            position: relative;
-            display: inline-block;
-            content: "";
-            width: 1.75rem;
-            height: 1.75rem;
-            border-radius: 99999px;
-            opacity: 0.65;
-        }
-
-        .logo::before {
-            z-index: 2;
-            background: #E41822;
-        }
-
-        .logo::after {
-            z-index: 1;
-            background: #F89319;
-            margin-left: -1rem;
-        }
-
-        .logo,
-        .bank {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .bank {
-            margin-left: -0.25rem;
-            margin-top: 0.25rem;
-            font-size: 0.625rem;
-            font-weight: 700;
-            letter-spacing: 0.0725rem;
-            text-transform: uppercase;
-        }
-
-        .bank span {
-            color: rgba(255, 255, 255, 0.75);
-            display: block;
-            font-size: 0.67rem;
-            font-weight: 300;
-            letter-spacing: 0.085rem;
-        }
-
-        .name,
-        .nr,
-        .valid span:last-of-type {
-            text-transform: uppercase;
-            font-family: "Courier New", Courier, monospace;
-            font-weight: 600;
-            text-shadow: 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.1);
-
-            color: #eaeef1;
-        }
-
-        .chip {
-            position: relative;
-            border-radius: 0.325rem;
-            background: #ffd75e;
-            width: 2.25rem;
-            height: 1.65rem;
-            margin-left: 1.25rem;
-            border: 1px solid #666;
-        }
-
-        .chip::before {
-            content: "";
-            position: absolute;
-            left: 0%;
-            top: 25%;
-            right: 0;
-            bottom: 20%;
-            z-index: 1;
-            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-        }
-
-        .chip::after {
-            content: "";
-            position: absolute;
-            top: 0%;
-            left: 25%;
-            right: 25%;
-            bottom: 0;
-            z-index: 1;
-            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-        }
-
-        .nr {
-            margin: 0.5rem 0 0 1.25rem;
-            font-size: 1.2rem;
-        }
-
-        .valid {
-            margin: 0.5rem 0;
-            margin-left: 6rem;
-        }
-
-        .valid>span:first-of-type {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 6px;
-            text-transform: uppercase;
-            width: 1.25rem;
-            line-height: 1;
-            display: inline-block;
-            position: relative;
-            top: -0.125rem;
-        }
-
-        .valid>span:last-of-type {
-            font-size: 0.875rem;
-            vertical-align: top;
-        }
-
-        .name {
-            position: absolute;
-            left: 0.325rem;
-            bottom: -0.5rem;
-            font-size: 1rem;
-        }
-
-
-        .test {
-            font-size: 5em;
-        }
-
-     
-
-.gradient {
-	position: relative;
-	height: 100vh;
-	width: 100%;
-	background-image: radial-gradient(180deg,#43e307,#0456fa);
-    
-}
-   
-.container {
-
-  background-blend-mode: lighten;
-  opacity: 55%;
-}
-    </style>
-</head>
-	<body data-id="0" class="demo-1 loading container">
+	<script src="/base.98fd6c19.js"></script><script src="/index2.js"></script></head>
+	<body class="demo-1 loading">
 		<main data-scroll-container="">
-			<section id="header" class="content granimate content--numbered">
+			<section id="header" class="content content--numbered">
 				<div class="frame">
 					<div class="frame__title-wrap">
-						<h1 class="frame__title">virgogabrielle 999</h1>
+						<h1 class="frame__title">virgogabrielle</h1>
 					</div>
 					<div class="frame__links">
-				
+						<a href="https://tympanus.net/Development/videoTransitions/">Previous demo</a>
+						<a href="https://tympanus.net/codrops/?p=51396">Article</a>
+						<a href="https://github.com/codrops/TileScroll/">GitHub</a>
+					</div>
+					<div class="frame__demos">
+						<a href="/index.html" class="frame__demo frame__demo--current">Demo 1</a>
+						<a href="/index2.html" class="frame__demo">Demo 2</a>
+						<a href="/index3.html" class="frame__demo">Demo 3</a>
 					</div>
 				</div>
-				
-				<p class="content__pretitle">virgogabrielle</p>
-				<h1 class="content__title" data-scroll="" data-scroll-speed="2">999</h1>
+				<p class="content__pretitle">999</p>
+				<h1 class="content__title" data-scroll="" data-scroll-speed="2">virgogabrielle</h1>
 			</section>
 			<section class="tiles tiles--rotated" id="grid2">
 				<div class="tiles__wrap">
@@ -245,39 +48,39 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 						<div class="tiles__line-img"></div>
 						<div class="tiles__line-img"></div>
 						<div class="tiles__line-img"></div>
-						<div class="tiles__line-img" style="background-image:url(/4.8ed29d64.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/5.7795c51e.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/6.ac3cd742.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll="" data-scroll-speed="-7" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div class="tiles__line-img"></div>
-						<div class="tiles__line-img" style="background-image:url(/8.698e0dbd.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/9.16738e2f.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/10.e7aba2b1.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/11.e75a941d.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/12.4061d1aa.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll="" data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(/13.1bbeab4e.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/14.fab38393.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/15.73adc2fc.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/16.a7efd02b.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/17.71510293.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/18.c5d0ab34.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/1jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/2.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/3.jpg)"></div>
 					</div>
 					<div class="tiles__line" data-scroll="" data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(/19.8091b01d.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/20.5528d5b7.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/21.5ac924ec.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/22.699471d5.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/23.dbfd7b5e.jpg)"></div>
+						<div class="tiles__line-img"></div>
+						<div class="tiles__line-img" style="background-image:url(/4.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/5.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/6.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/7jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/8.jpg)"></div>
+					</div>
+					<div class="tiles__line" data-scroll="" data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+						<div class="tiles__line-img" style="background-image:url(/9.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/10.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/11.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/12.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/13.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/14.jpg)"></div>
+					</div>
+					<div class="tiles__line" data-scroll="" data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+						<div class="tiles__line-img" style="background-image:url(/15.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/16.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/17.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/18.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/19.jpg)"></div>
 						<div class="tiles__line-img"></div>
 					</div>
 					<div class="tiles__line" data-scroll="" data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
 						<div class="tiles__line-img"></div>
-						<div class="tiles__line-img" style="background-image:url(/26.20dd68bc.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/27.8a0dc9c0.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/28.ed5abea3.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/20.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/21.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/22.jpg)"></div>
 						<div class="tiles__line-img"></div>
 						<div class="tiles__line-img"></div>
 					</div>
@@ -289,28 +92,28 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 			<section class="tiles" id="grid">
 				<div class="tiles__wrap">
 					<div class="tiles__line" data-scroll="" data-scroll-speed="1" data-scroll-target="#grid" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(/30.1e685d15.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/29.31146de1.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/28.ed5abea3.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/27.8a0dc9c0.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/26.20dd68bc.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/25.31fbca33.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/24.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/25.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/26.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/27.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/28.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/29.jpg)"></div>
 					</div>
 					<div class="tiles__line" data-scroll="" data-scroll-speed="2" data-scroll-target="#grid" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(/24.ec1a04ff.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/23.dbfd7b5e.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/22.699471d5.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/19.8091b01d.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/18.c5d0ab34.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/17.71510293.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/30.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/31.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/32.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/33.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/34.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/35.jpg)"></div>
 					</div>
 					<div class="tiles__line" data-scroll="" data-scroll-speed="1" data-scroll-target="#grid" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(/16.a7efd02b.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/15.73adc2fc.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/14.fab38393.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/13.1bbeab4e.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/12.4061d1aa.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/11.e75a941d.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/36.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/37.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/38.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/39.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/40.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/22.jpg)"></div>
 					</div>
 				</div>
 			</section>
@@ -324,24 +127,24 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 			<section class="tiles tiles--columns" id="grid3">
 				<div class="tiles__wrap">
 					<div class="tiles__line" data-scroll="" data-scroll-speed="1" data-scroll-target="#grid3" data-scroll-direction="vertical">
-						<div class="tiles__line-img" style="background-image:url(/20.79785ea9.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/19.70099d5f.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/18.8ad6a6a5.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/11.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/12.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/13.jpg)"></div>
 					</div>
 					<div class="tiles__line" data-scroll="" data-scroll-speed="-1" data-scroll-target="#grid3" data-scroll-direction="vertical">
-						<div class="tiles__line-img" style="background-image:url(/16.bf2e6aed.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/3.449799ca.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/14.e53accbf.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/14.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/15.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/16.jpg)"></div>
 					</div>
 					<div class="tiles__line" data-scroll="" data-scroll-speed="1" data-scroll-target="#grid3" data-scroll-direction="vertical">
-						<div class="tiles__line-img" style="background-image:url(/12.d01438d5.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/11.bc61a1e3.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/10.4f66b9bf.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/17.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/18.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/19.jpg)"></div>
 					</div>
 					<div class="tiles__line" data-scroll="" data-scroll-speed="-1" data-scroll-target="#grid3" data-scroll-direction="vertical">
-						<div class="tiles__line-img" style="background-image:url(/8.2c69e487.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/7.0a1756e3.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(/6.3ade7d4e.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/21.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/22.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(/23.jpg)"></div>
 					</div>
 				</div>
 			</section>
@@ -355,113 +158,8 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 						<a href="/index3.html" class="frame__demo">Demo 3</a>
 					</div>
 				</div>
-				
 			</section>
 		</main>
-		<script>
-			document.addEventListener("touchstart", function() {}, true);
-			</script>
-		<!-- partial -->
-			<script>
-		
-				import { swarmBackground } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
-		
-		const bg = swarmBackground({
-		  el: document.getElementById('app'),
-		  eventsEl: document.body,
-		  gpgpuSize: 256,
-			color: [Math.random() * 0xffffff, Math.random() * 0xffffff],
-		  geometry: 'default'
-		})
-		
-		bg.three.camera.position.set(0, 0, 200)
-		
-		document.body.addEventListener('click', () => {
-		  bg.setColors([Math.random() * 0xffffff, Math.random() * 0xffffff])
-		})
-		
-			</script>
 		<script src="/js.00a46daa.js"></script>
 	</body>
-	<script src="dist/gyro-gradient.umd.js"></script>
-<script>
-    gyroGradient('.card', {
-        type: 'background',
-        gradient: {
-            type: 'radial',
-            flip: {
-                x: true
-            },
-            colors: [
-                [0, '#3c3f43', .1],
-                [.25, '#cdddf3', .1],
-                [1, '#cdddf3', .85]
-            ]
-        },
-        pattern: {
-            type: 'noise',
-            opacity: .25
-        }
-    });
-
-    gyroGradient('.gradient', {
-        type: 'background',
-        gradient: {
-            type: 'linear',
-            angle: '110deg',
-            flip: {
-                x: true
-            },
-            colors: [
-                [.25, '#fff6db', 0],
-                [.3, '#fff', .9],
-                [.325, '#767d88', .25],
-                [.45, '#fff', .75],
-                [.525, '#767d88', .5],
-                [.75, '#cdddf3', 0]
-            ]
-        },
-    })
-
-    gyroGradient('.card', {
-        type: 'background',
-        gradient: {
-            type: 'radial',
-            flip: {
-                x: true
-            },
-            colors: [
-                [0, '#ffaf10', .5],
-                [.325, '#fff', .1],
-                [.325, '#fff', .5],
-                [1, '#fff', 1]
-            ]
-        },
-        pattern: {
-            type: 'noise',
-            opacity: .5
-        }
-    });
-
-
-    gyroGradient('.header', {
-        type: 'text',
-        gradient: {
-            type: 'linear',
-            angle: '120deg',
-            colors: [
-                [.1, '#eee'],
-                [.25, '#888'],
-                [.35, '#999'],
-                [.35, '#fff'],
-                [.35, '#fff'],
-                [.75, '#999'],
-                [.75, '#fff']
-            ]
-        },
-    });
-
-</script>
-
-    
 </html>

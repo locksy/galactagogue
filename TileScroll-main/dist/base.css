@@ -4,9 +4,44 @@
 	box-sizing: border-box;
 }
 
+.gradient {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-image: radial-gradient(180deg,#43e307,#0456fa);
+	background-blend-mode: difference;
+	animation: hue 11s linear 0s infinite reverse;
+	background-blend-mode: difference;
+    
+}
+   
+.container {
+  width: 100%;
+  height:100%;
+  border: 1px dotted black;
+  margin:0 auto;
+  background: rgb(76, 238, 51);
+  background-blend-mode: difference;
+  opacity: 55%;
+}
 
-
-
+.mydiv {
+	height: 500vh;
+  }
+  
+  
+  h1 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	font-weight: 800;
+	font-size: 60px;
+	font-family: Arial, sans-serif;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	text-transform: uppercase;
+  }
+  
 @keyframes neon {
 	from {
 	  text-shadow:
@@ -32,11 +67,12 @@
   
   
   .granimate {
-	background-color: #570063;
+	background-color: #210063;
 	animation: hue 11s linear 0s infinite reverse;
+	background-blend-mode: difference;
   }
   .granimate::before {
-	background: linear-gradient(105deg, rgb(44, 1, 56), #04e200);
+	background: linear-gradient(105deg, rgb(228, 17, 77), #04e200);
 	animation: hue 12s linear 1s infinite;
   }
   
@@ -91,12 +127,14 @@ body {
 	overflow: hidden;
 	background-color: #700c82;
 	animation: hue 11s linear 0s infinite reverse;
+	background-blend-mode: difference;
 }
 
 body:before {
 
 	background: linear-gradient(105deg, rgba(255, 190, 0, 0), #6c0053);
 	animation: hue 12s linear 1s infinite;
+	background-blend-mode: difference;
   }
   
 .dom-gl {
@@ -276,6 +314,7 @@ main {
 	flex-direction: column;
 	align-content: center;
 	justify-content: space-between;
+	background-blend-mode: difference;
 }
 
 .content--auto {
@@ -351,6 +390,7 @@ main {
 	height: var(--tiles-height);
 	position: relative;
 	overflow: hidden;
+	background-blend-mode: difference;
 }
 
 .tiles--columns-rotated {
@@ -391,6 +431,7 @@ main {
 	left: 50%;
 	top: 50%;
 	transform: translate3d(-50%,-50%, 0);
+	background-blend-mode: difference;
 }
 
 .tiles--rotated .tiles__wrap {
@@ -463,6 +504,7 @@ main {
 	margin: var(--tile-margin);
 	background-size: cover;
 	background-position: 50% 50%;
+	background-blend-mode: difference;
 }
 
 .tiles--perspective .tiles__line-img {
@@ -568,6 +610,7 @@ main {
 	font-size: 3vw;
 	vertical-align: top;
 	margin-left: 1rem;
+	background-blend-mode: difference;
 }
 
 /*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
