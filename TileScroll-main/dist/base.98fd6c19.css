@@ -24,13 +24,13 @@ body {
 }
 
 .granimate {
-    background-color: #2ecc71;
+    background-color: #ff00ee;
     animation: hue 11s linear 0s infinite reverse;
     background-blend-mode: difference;
 }
 
 .granimate::before {
-    background: linear-gradient(105deg, rgba(255, 190, 0, 0), #ffbe00);
+    background: linear-gradient(105deg, rgba(255, 0, 149, 0.78), #50c100);
     animation: hue 12s linear 1s infinite;
 }
 
