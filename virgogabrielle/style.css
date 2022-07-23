@@ -242,6 +242,7 @@ a:focus {
 
 .content p {
     max-width: 44%;
+    max-height: 44%;
     margin: auto;
     will-change: transform;
     position: relative;
