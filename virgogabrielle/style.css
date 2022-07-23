@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    /*========== Font and typography ==========*/
+    --body-font: 'Montserrat', sans-serif;
+    --normal-font-size: .938rem;
+    --h3-font-size: 1.125rem;
+    --small-font-size: .75rem;
+}
+
+@media screen and (min-width: 968px) {
+     :root {
+        --normal-font-size: 1rem;
+        --h3-font-size: 1.25rem;
+        --small-font-size: .813rem;
+    }
+}
+
 @font-face {
     font-family: 'Citation Regular';
     src: url(Citation-Regular.ttf);
@@ -225,8 +241,11 @@ a:focus {
 /* Testing changing text width.  Increase width for mobile */
 
 .content p {
-    max-width: 50%;
+    max-width: 44%;
     margin: auto;
+    will-change: transform;
+    position: relative;
+    flex-basis: 66%;
 }
 
 .content--bg {
@@ -245,6 +264,7 @@ a:focus {
 }
 
 .content__img {
+    flex-basis: 66%;
     max-width: 44%;
     will-change: transform;
     position: relative;
@@ -399,6 +419,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     position: relative;
     font-size: 1rem;
     color: #eeb0e9;
+    padding: 30vh 0 50vh;
 }
 
 .content__text {
@@ -406,14 +427,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 .frosted-glass {
-    width: 400px;
+    width: 77%;
     filter: blur(111px);
     text-align: center;
     background: inherit;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 2rem;
     background: #0c2e0454;
     box-sizing: border-box;
