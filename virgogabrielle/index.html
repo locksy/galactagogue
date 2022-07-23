@@ -1,398 +1,71 @@
-<!--credit Adam Rosol https://www.instagram.com/adxmboni/-->
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" class="no-js">
+
 <head>
-  <meta charset="UTF-8">
-  <title>virgogabrielle</title>
-  <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
-<link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
-<link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>On-Scroll Letter Animations | Demo 1 | Codrops</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Codrops">
+    <link rel="shortcut icon" href="favicon.26242483.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/pcv4xiq.css">
+    <link rel="stylesheet" type="text/css" href="base.98fd6c19.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        document.documentElement.className = "js";
 
-<script>
-        gyroGradient('.slider', {
-            type: 'background',
-            gradient: {
-                type: 'radial',
-                flip: {
-                    x: true
-                },
-                colors: [
-                    [0, '#3c3f43', .1],
-                    [.25, '#cdddf3', .1],
-                    [1, '#cdddf3', .85]
-                ]
-            },
-            pattern: {
-                type: 'noise',
-                opacity: .25
-            }
-        });
-</script>
+        var supportsCssVars = function supportsCssVars() {
+            var e,
+                t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+        };
+
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
+    <link rel="stylesheet" href="js.00a46daa.css">
 </head>
-<body class="granimate">
-<!-- partial:index.partial.html -->
-<main>
-	<div class="container tester azure scrolling" id="auto">
-	<div class="frame">
-		<h3 class="frame__logo">virgogabrielle</h3>
-		<button class="frame__button">999</button>
-		<p class="frame__artist" style="text-align: center ;">
-			<span>[ Click Image<a href="#" target="_blank">To Enlarge ]</a></span>
-		</p>
-	
-	</div>
-	<div class="image-container">
-        <canvas class="canvas" width="900" height="1200" id="canvas"></canvas>
-        <div class="loading-screen" id="loading">Loading...</div>
+
+<body class="demo-1 loading">
+    <div class="frame">
+        <h1 class="frame__title">On-Scroll Letter Animations</h1>
+        <div class="frame__demos">
+            <span class="frame__demos-text">More demos:</span>
+            <a class="frame__demo frame__demo--current" href="index.html">01</a>
+            <a class="frame__demo" href="index2.html">02</a>
+            <a class="frame__demo" href="index3.html">03</a>
+            <a class="frame__demo" href="index4.html">04</a>
+            <a class="frame__demo" href="index5.html">05</a>
+        </div>
+        <div class="frame__links">
+            <a href="http://tympanus.net/Tutorials/WebGL2Metaballs/">Previous demo</a>
+            <a href="https://tympanus.net/codrops/?p=52827">Article</a>
+            <a href="https://github.com/codrops/OnScrollLetterAnimations/">GitHub</a>
+        </div>
     </div>
-	<div class="slider tester azure" id="auto" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-perspective="500" gyroscope="true" >
-		<div class="slider__image--wrapper" data-tilt data-tilt-max="7" data-tilt-speed="400" data-tilt-perspective="7	00" gyroscope="true">
-			<img class="slider__image slider__image--1" src="1.png" alt="image 01" />
-			<img class="slider__image slider__image--2" src="2.png" alt="image 02" />
-			<img class="slider__image slider__image--3" src="3.png" alt="image 03" />
-			<img class="slider__image slider__image--4" src="4.png" alt="image 04" />
-			<img class="slider__image slider__image--5" src="5.png" alt="image 04" />
-			<img class="slider__image slider__image--6" src="6.png" alt="image 04" />
-			<img class="slider__image slider__image--7" src="7.png" alt="image 04" />
-			<img class="slider__image slider__image--8" src="8.png" alt="image 04" />
-			<img class="slider__image slider__image--9" src="9.png" alt="image 04" />
-			<img class="slider__image slider__image--10" src="10.png" alt="image 04" />
-			<img class="slider__image slider__image--11" src="11.png" alt="image 04" />
-			<img class="slider__image slider__image--12" src="12.png" alt="image 04" />
-			<img class="slider__image slider__image--13" src="13.png" alt="image 04" />
-			<img class="slider__image slider__image--14" src="14.png" alt="image 04" />
-			<img class="slider__image slider__image--15" src="15.png" alt="image 04" />
-		</div>
-		<div class="slider__slide-info--wrapper">
-			<div class="slider__silde-info slide--current">
-				<div class="slider__nav" data-splitting>999</div>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>Voluptate exercitationem rem quia accusamus sit distinctio officiis. Explicabo rerum et sed. Nam soluta eaque deleniti dolor. Nostrum explicabo ut earum dolorem iste rem.
-
-						Deleniti soluta est at numquam mollitia eveniet. Numquam sunt ipsam vel sunt in beatae blanditiis cupiditate. Cum deleniti omnis quod sed autem.
-						
-						Recusandae eligendi sed quod id magnam. Aut nobis deserunt aperiam. Eum harum quo aut est odit vitae itaque.
-						
-						Eos placeat voluptatem architecto. Ut id ex itaque quia minima. Eum numquam nisi sed minima perspiciatis. Enim qui quo fugit aut qui laborum. Dicta explicabo mollitia et. Eos velit ab hic non ab nulla magni.
-						
-						Molestiae aut vel ea vero adipisci placeat cum. Animi cumque non explicabo. Porro non debitis rem. Sed itaque dolor quo rem vel aut facilis. Rerum quasi recusandae velit molestias autem</h2>
-					<p class="slide__text slide__text--description">
-						Your assumptions are your windows on the world. Scrub them off every once in a while, or the light won't
-						come in.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>02</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>areminiscentsmile</h2>
-					<p class="slide__text slide__text--description">
-						In this modern world it is easy to be complex but difficult to be simple. At least try to keep your mind
-						simple.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>03</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>bimbo</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>04</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>chopper</h2>
-					<p class="slide__text slide__text--description">
-						Every man has his secret sorrows which the world knows not; and often times we call a man cold when he is
-						only sad.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>05</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>fulgent</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>06</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>maglite</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>07</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>makingstanding</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>08</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>morgina</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>09</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>obituary</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>10</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>stanley</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-			<div class="slider__silde-info">
-				<h2 class="slide__index" data-splitting>11</h2>
-				<div class="slide__text--wrapper">
-					<h2 class="slide__text slide__text--title" data-splitting>myhearthollow</h2>
-					<p class="slide__text slide__text--description">
-						You simply have to turn your back on a culture that has gone sterile and dead and get with the program of a
-						living world and the imagination.
-					</p>
-				</div>
-			</div>
-
-
-		</div>
-		<nav class="slider__nav--wrapper">
-			<button class="slider__nav slider__nav--prev">
-				<svg>
-					<path d="M 47.5547,8.05465 H 4.94603 L 10.0165,3.00878 C 10.5822,2.44568 10.5844,1.53058 10.0213,0.964816 9.45823,0.398976 8.54305,0.396881 7.97729,0.959902 L 0.425238,8.47552 c -5.06e-4,4.4e-4 -8.67e-4,9.4e-4 -0.0013,0.00138 -0.564323,0.56309 -0.566129,1.48115 -1.45e-4,2.0461 5.06e-4,5e-4 8.67e-4,10e-4 0.001301,0.0014 L 7.97714,18.04 c 0.5657,0.563 1.48087,0.561 2.04406,-0.0049 0.5631,-0.5658 0.5609,-1.4809 -0.0049,-2.044 L 4.94603,10.9453 H 47.5547 C 48.353,10.9453 49,10.2982 49,9.49996 49,8.70172 48.353,8.05465 47.5547,8.05465 Z" fill="white" />
-				</svg>
-			</button>
-			<button class="slider__nav slider__nav--next">
-				<svg>
-					<path d="M 1.44529,10.9454 H 44.054 l -5.0705,5.0458 c -0.5657,0.5631 -0.5679,1.4782 -0.0048,2.044 0.5631,0.5658 1.4782,0.5679 2.044,0.0049 l 7.5521,-7.5156 c 5e-4,-5e-4 8e-4,-10e-4 0.0013,-0.0014 0.5643,-0.56309 0.5661,-1.48115 1e-4,-2.04613 -5e-4,-4.3e-4 -9e-4,-9.3e-4 -0.0013,-0.00137 L 41.0229,0.959983 C 40.4572,0.397033 39.542,0.398984 38.9788,0.964896 38.4157,1.53066 38.4179,2.44576 38.9837,3.00886 L 44.054,8.05473 H 1.44528 C 0.64704,8.05473 -2.75561e-5,8.7018 -2.74863e-5,9.50004 -2.74165e-5,10.2983 0.647041,10.9454 1.44529,10.9454 Z" fill="white" />
-				</svg>
-			</button>
-		</nav>
-	</div>
-	
-
-</main>
-</div>
-<svg class="cursor cursor--large" width="60" height="60" viewBox="0 0 60 60">
-	<circle class="cursor__inner" cx="30" cy="30" r="20" />
-</svg>
-<svg class="cursor cursor--small" width="60" height="60" viewBox="0 0 60 60">
-	<circle class="cursor__inner" cx="30" cy="30" r="5" />
-</svg>
-<svg class="cursor cursor--close" width="40" height="40" viewBox="0 0 512 512">
-	<line x1="368" y1="368" x2="144" y2="144" />
-	<line x1="368" y1="144" x2="144" y2="368" />
-</svg>
-
-<!-- this effect is taken from -- https://codepen.io/sandstedt/pen/GRZeywP?editors=0100 -->
-
-<div class="loading__wrapper">
-	<h4 class="loading__text">
-		<span class="loading__text--inner">loading touch version...</span>
-	</h4>
-	<h1 class="text__wrapper">
-		<span class="text__row">
-			<span class="text">virgogabrielle</span>
-		</span>
-		<span class="text__row text__row--sibling" aria-hidden="true">
-			<span class="text">virgogabrielle</span>
-		</span>
-		<span class="text__row text__row--sibling" aria-hidden="true">
-			<span class="text">virgogabrielle</span>
-		</span>
-		<span class="text__row text__row--sibling" aria-hidden="true">
-			<span class="text">virgogabrielle</span>
-		</span>
-		<span class="text__row text__row--sibling" aria-hidden="true">
-			<span class="text">virgogabrielle</span>
-		</span>
-		<span class="text__row text__row--sibling" aria-hidden="true">
-			<span class="text">virgogabrielle</span>
-		</span>
-	</h1>
-	<div class="bg__transition--slide"></div>
-</div>
-
-<script src="touchmove.js"></script>
-<script id="vertexShader" type="x-shader/x-vertex">
-	precision mediump float;
-
-	varying vec2 vUv;
-	varying float vWave;
-
-	uniform float uTime;
-	uniform float uAmplitude;
-	uniform float uProgDirection;
-	uniform float uMouseOverAmp;
-	uniform float uRadius;
-
-	uniform vec2 uMeshSize;
-	uniform vec2 uMousePos;
-
-	uniform bool uAnimating;
-	uniform bool uTranslating;
-
-	float mapVal(in float n,in float start1,in float stop1,in float start2,in float stop2){
-			return((n-start1)/(stop1-start1))*(stop2-start2)+start2;
-	}
-
-	void main(){
-			vec3 pos=position;
-			vUv=uv;
-
-			vec2 center=vUv-uMousePos;
-			center.x*=uMeshSize.x/uMeshSize.y;
-			float dist=length(center);
-
-			float radius=uRadius;
-
-			float mask=smoothstep(radius,radius*5.,dist);
-			float d=mapVal(mask,-1.,1.,-1.,0.);
-
-			if(uAnimating){
-					pos.z=sin(pos.x*5.+uTime*10.*uProgDirection)*uAmplitude;
-					pos.z*=2.5;
-			}else{
-					pos.z=d*uMouseOverAmp;
-					pos.z*=15.;
-			}
-
-			if(uTranslating){
-					pos.z=sin(pos.y*6.+uTime*10.)*uAmplitude;
-					pos.z*=3.5;
-			}
-
-			vWave=pos.z;
-
-			gl_Position=projectionMatrix*modelViewMatrix*vec4(pos,1.);
-	}
-</script>
-
-<script id="fragmentShader" type="x-shader/x-fragment">
-	precision mediump float;
-
-	varying vec2 vUv;
-	varying float vWave;
-
-	uniform float uTime;
-	uniform float uProg;
-	uniform float uProgDirection;
-
-	uniform sampler2D uCurrTex;
-	uniform sampler2D uNextTex;
-
-	uniform vec2 uMeshSize;
-	uniform vec2 uImageSize;
-
-	vec2 backgroundCoverUv(vec2 uv,vec2 canvasSize,vec2 textureSize){
-			vec2 ratio=vec2(
-					min((canvasSize.x/canvasSize.y)/(textureSize.x/textureSize.y),1.),
-					min((canvasSize.y/canvasSize.x)/(textureSize.y/textureSize.x),1.)
-			);
-
-			vec2 uvWithRatio=uv*ratio;
-
-			return vec2(
-					uvWithRatio.x+(1.-ratio.x)*.5,
-					uvWithRatio.y+(1.-ratio.y)*.5
-			);
-	}
-
-	void main(){
-			vec2 texUv=backgroundCoverUv(vUv,uMeshSize,uImageSize);
-
-			float x=uProg;
-			float y;
-			if(uProgDirection==1.)y=(x*2.+(vUv.x-1.));
-			else y=((x*2.)-vUv.x);
-			x=smoothstep(0.,1.,y);
-
-			float w=vWave;
-
-			float r1=texture2D(uCurrTex,texUv+w*.04).r;
-			float g1=texture2D(uCurrTex,texUv+w*.01).g;
-			float b1=texture2D(uCurrTex,texUv+w*-.03).b;
-			vec3 tex1=vec3(r1,g1,b1);
-
-			float r2=texture2D(uNextTex,texUv+w*.04).r;
-			float g2=texture2D(uNextTex,texUv+w*.01).g;
-			float b2=texture2D(uNextTex,texUv+w*-.03).b;
-			vec3 tex2=vec3(r2,g2,b2);
-
-			float scaleUp=(.4+.6*(1.-uProg));
-			float scaleDown=(.6+.4*uProg);
-
-			vec4 f1=mix(
-					texture2D(uCurrTex,texUv*(1.-x)*scaleUp+vec2(.15)*uProg),
-					texture2D(uNextTex,texUv*x*scaleDown),
-			x);
-
-			vec3 f2=mix(tex1,tex2,x);
-
-			vec4 final=mix(f1,vec4(f2,1.),.12);
-
-			gl_FragColor=final;			
-	}
-</script>
-<script>
-	document.addEventListener("touchstart", function() {}, true);
-	</script>
-<!-- partial -->
-	<script>
-
-		import { swarmBackground } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
-
-const bg = swarmBackground({
-  el: document.getElementById('app'),
-  eventsEl: document.body,
-  gpgpuSize: 256,
-    color: [Math.random() * 0xffffff, Math.random() * 0xffffff],
-  geometry: 'default'
-})
-
-bg.three.camera.position.set(0, 0, 200)
-
-document.body.addEventListener('click', () => {
-  bg.setColors([Math.random() * 0xffffff, Math.random() * 0xffffff])
-})
-
-	</script>
-	
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
-<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
-<script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/tiny-emitter@2.1.0/index.min.js'></script>
-<script  src="./script.js"></script>
-<script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <main data-scroll-container="">
+        <section class="content">
+            <img data-scroll="" data-scroll-speed="1" class="content__img" src="IMG_0011.JPG" alt="Some image">
+            <h2 data-splitting="" class="content__text">Persepolis</h2>
+        </section>
+        <section class="content">
+            <img data-scroll="" data-scroll-speed="1" class="content__img" src="IMG_0021.JPG" alt="Some image">
+            <h2 data-splitting="" class="content__text">Babylonia</h2>
+        </section>
+        <section class="content">
+            <img data-scroll="" data-scroll-speed="1" class="content__img" src="IMG_0032.JPG" alt="Some image">
+            <h2 data-splitting="" class="content__text">Diodorus</h2>
+        </section>
+        <section class="content">
+            <img data-scroll="" data-scroll-speed="1" class="content__img" src="IMG_0042.JPG" alt="Some image">
+            <h2 data-splitting="" class="content__text">Zoroastrian</h2>
+        </section>
+        <section class="content">
+            <img data-scroll="" data-scroll-speed="1" class="content__img" src="IMG_0039.JPG" alt="Some image">
+            <h2 data-splitting="" class="content__text">Ecbatana</h2>
+        </section>
+    </main>
+    <script src="js.00a46daa.js"></script>
 </body>
+
 </html>
